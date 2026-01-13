@@ -13,6 +13,7 @@ global > color
   --color-font-base: #333333;
   --color-font-light: #888888;
   --color-white: #ffffff;
+  --color-black: #000000;
   --color-red: #e95757;
   --color-button-shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.2);
   --color-button-shadow-active: 0 4px 8px rgba(0, 0, 0, 0.15);
@@ -241,7 +242,6 @@ body {
   font-size: 16rem;
   font-family: var(--font-family-base);
   color: var(--color-font-base);
-  font-weight: 500;
 }
 @media screen and (min-width: 900px) {
   body {
@@ -334,7 +334,7 @@ layout > header
 */
 .l-header {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 23rem 12rem;
   position: absolute;
   top: 0;
@@ -344,6 +344,7 @@ layout > header
 }
 @media screen and (min-width: 900px) {
   .l-header {
+    align-items: center;
     padding: 24rem 65rem;
   }
 }
@@ -359,8 +360,17 @@ layout > header
   }
 }
 
+.l-header-menu::-webkit-backdrop {
+  background-color: var(--color-black);
+  opacity: 0.3;
+}
+
+.l-header-menu::backdrop {
+  background-color: var(--color-black);
+  opacity: 0.3;
+}
+
 .l-header-menu-open {
-  margin-left: auto;
   background-color: var(--color-primary);
   width: 50rem;
   height: 50rem;
@@ -390,33 +400,105 @@ layout > header
   }
 }
 
+.l-header-menu-inner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 85%;
+  height: 90%;
+  max-height: 592rem;
+  margin: 0;
+  background-color: var(--color-primary);
+  padding: 20rem 12rem 40rem 40rem;
+  border-bottom-left-radius: 30rem;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.l-header-menu-inner::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (min-width: 900px) {
-  .l-header-nav {
-    margin-left: auto;
+  .l-header-menu-inner {
+    display: contents;
   }
 }
 
+.l-header-menu-close {
+  margin-left: auto;
+  background-color: var(--color-white);
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.l-header-menu-close::before {
+  content: "";
+  display: inline-block;
+  width: 19.8rem;
+  height: 19.8rem;
+  background-image: url("../img/icon-cross.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (min-width: 900px) {
+  .l-header-menu-close {
+    display: none;
+  }
+}
+
+.l-header-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16rem;
+  transform: translateY(-27rem);
+}
 @media screen and (min-width: 900px) {
   .l-header-list {
-    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 50rem;
+    transform: translateY(0);
   }
 }
 
 .l-header-item-link {
+  display: inline-flex;
+  flex-direction: column;
   color: var(--color-white);
   transition: all 0.3s ease;
 }
-.l-header-item-link:hover {
-  color: var(--color-font-base);
+@media screen and (min-width: 900px) {
+  .l-header-item-link {
+    flex-direction: row;
+  }
+}
+@media (any-hover: hover) {
+  .l-header-item-link:hover {
+    color: var(--color-font-base);
+  }
 }
 
 .l-header-item-en {
-  line-height: 1;
-  letter-spacing: 0.025em;
   font-family: var(--font-family-en);
+  font-size: 28rem;
+  letter-spacing: 0.025em;
+}
+@media screen and (min-width: 900px) {
+  .l-header-item-en {
+    font-size: 18rem;
+    line-height: 1;
+  }
 }
 
+.l-header-item-jp {
+  font-size: 14rem;
+  letter-spacing: 0.025em;
+}
 @media screen and (min-width: 900px) {
   .l-header-item-jp {
     display: none;
@@ -432,6 +514,10 @@ layout > header
     display: inline-flex;
     align-items: center;
   }
+  .l-header-item-link--contact:active {
+    transform: translateY(0);
+    box-shadow: var(--color-button-shadow-active);
+  }
   .l-header-item-link--contact::before {
     content: "";
     display: inline-block;
@@ -444,15 +530,13 @@ layout > header
     background-repeat: no-repeat;
     background-position: center;
   }
+}
+@media screen and (min-width: 900px) and (any-hover: hover) {
   .l-header-item-link--contact:hover {
     background-color: var(--color-primary-hover);
     transform: translateY(-2rem);
     box-shadow: var(--color-button-shadow-hover);
     color: var(--color-white);
-  }
-  .l-header-item-link--contact:active {
-    transform: translateY(0);
-    box-shadow: var(--color-button-shadow-active);
   }
 }
 
@@ -468,13 +552,13 @@ page > top > top-kv
   background-image: url(../img/top/top-kv-sp.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  height: 100dvh;
+  height: 485rem;
   position: relative;
 }
 @media screen and (min-width: 900px) {
   .top-kv {
     background-image: url(../img/top/top-kv.jpg);
+    height: 769rem;
   }
 }
 

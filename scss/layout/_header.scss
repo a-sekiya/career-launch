@@ -1,0 +1,140 @@
+@use "../global" as g;
+
+/*!
+layout > header
+------------------------------
+*/
+.l-header {
+  display: flex;
+  align-items: center;
+  padding: 23rem 12rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-index-header);
+
+  @include g.mq() {
+    padding: 24rem 65rem;
+  }
+}
+
+.l-header-logo-image {
+  width: 240rem;
+  height: 44rem;
+
+  @include g.mq() {
+    width: 290rem;
+    height: 53rem;
+  }
+}
+
+.l-header-menu-open {
+  margin-left: auto;
+  background-color: var(--color-primary);
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 24rem;
+    height: 4rem;
+    background-image: url("../img/icon-dots.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include g.mq() {
+    display: none;
+  }
+}
+
+.l-header-menu {
+  @include g.mq() {
+    display: contents;
+  }
+}
+
+.l-header-menu-close {
+}
+
+.js-header-menu-close {
+}
+
+.l-header-nav {
+  @include g.mq() {
+    margin-left: auto;
+  }
+}
+
+.l-header-list {
+  @include g.mq() {
+    display: flex;
+    gap: 50rem;
+  }
+}
+
+.l-header-item {
+}
+
+.l-header-item-link {
+  color: var(--color-white);
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: var(--color-font-base);
+  }
+}
+
+.l-header-item-en {
+  line-height: 1;
+  letter-spacing: 0.025em;
+  font-family: var(--font-family-en);
+}
+
+.l-header-item-jp {
+  @include g.mq() {
+    display: none;
+  }
+}
+
+.l-header-item-link--contact {
+  @include g.mq() {
+    background-color: var(--color-primary);
+    padding: 10rem 32rem;
+    border-radius: 100vh;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 9rem;
+      width: 16rem;
+      height: 13rem;
+      background-image: url("../img/icon-mail.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2rem);
+      box-shadow: var(--color-button-shadow-hover);
+      color: var(--color-white);
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: var(--color-button-shadow-active);
+    }
+  }
+}

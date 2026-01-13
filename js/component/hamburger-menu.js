@@ -1,0 +1,4 @@
+/**
+ * ハンバーガーメニュー
+ */
+export const initializeHamburgerMenu = () => {};

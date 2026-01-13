@@ -1,0 +1,18 @@
+@use "../../global" as g;
+
+/*!
+page > top > top-kv
+------------------------------
+*/
+.top-kv {
+  background-image: url(../img/top/top-kv-sp.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  height: 100dvh;
+  position: relative;
+
+  @include g.mq() {
+    background-image: url(../img/top/top-kv.jpg);
+  }
+}

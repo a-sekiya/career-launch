@@ -18,8 +18,20 @@ utility > utility
   margin: -1px !important;
 }
 
+.u-pc-only {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
 .u-sp-only {
   @include g.mq() {
     display: none;
   }
+}
+
+.u-block {
+  display: block !important;
 }

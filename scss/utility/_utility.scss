@@ -35,3 +35,11 @@ utility > utility
 .u-block {
   display: block !important;
 }
+
+.u-ptb {
+  padding-block: 64px !important;
+
+  @include g.mq() {
+    padding-block: 96px !important;
+  }
+}

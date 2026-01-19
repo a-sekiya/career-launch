@@ -288,10 +288,81 @@ utility > utility
   display: block !important;
 }
 
+.u-ptb {
+  padding-block: 64px !important;
+}
+@media screen and (min-width: 900px) {
+  .u-ptb {
+    padding-block: 96px !important;
+  }
+}
+
 /*!
 component > button
 ------------------------------
 */
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 14rem;
+}
+@media screen and (min-width: 900px) {
+  .c-btn {
+    gap: 24rem;
+  }
+}
+@media (any-hover: hover) {
+  .c-btn:hover .c-btn-icon::after {
+    transform: translate(-10%, -50%);
+  }
+}
+
+.c-btn-text {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 900px) {
+  .c-btn-text {
+    font-size: 20rem;
+  }
+}
+
+.c-btn-icon {
+  display: block;
+  width: 47rem;
+  height: 47rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+}
+@media screen and (min-width: 900px) {
+  .c-btn-icon {
+    width: 58rem;
+    height: 58rem;
+  }
+}
+.c-btn-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  transition: transform 0.3s ease;
+}
+@media screen and (min-width: 900px) {
+  .c-btn-icon::after {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
 /*!
 component > entry-button
 ------------------------------
@@ -300,6 +371,49 @@ component > entry-button
 component > title
 ------------------------------
 */
+.c-top-title {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+}
+@media screen and (min-width: 900px) {
+  .c-top-title {
+    gap: 24rem;
+  }
+}
+.c-top-title::before {
+  content: "";
+  display: block;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.c-top-title--small {
+  gap: 10rem;
+}
+@media screen and (min-width: 900px) {
+  .c-top-title--small {
+    gap: 14rem;
+  }
+}
+
+.c-top-title-en {
+  font-family: var(--font-family-en);
+  line-height: 1;
+}
+
+.c-top-title-en--small {
+  font-size: 16rem;
+  letter-spacing: 0.075em;
+}
+@media screen and (min-width: 900px) {
+  .c-top-title-en--small {
+    font-size: 20rem;
+  }
+}
+
 /*!
 component > page-kv
 ------------------------------
@@ -696,6 +810,99 @@ page > top > top-kv
 page > top > top-about
 ------------------------------
 */
+.top-about-main {
+  padding-inline: 20rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-main {
+    margin-top: 40rem;
+    padding-inline: 83rem 0;
+  }
+}
+
+.top-about-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-inner {
+    grid-template-columns: 1fr 624rem;
+    gap: 59rem;
+  }
+}
+
+.top-about-text {
+  font-size: 28rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-top: 16rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-text {
+    font-size: 34rem;
+  }
+}
+
+.top-about-text02 {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 8rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-text02 {
+    font-size: 16rem;
+  }
+}
+
+.top-about-text03 {
+  font-size: 16rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  margin-top: 24rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-text03 {
+    font-size: 18rem;
+    margin-top: 32rem;
+  }
+}
+
+.top-about-image {
+  padding-left: 20rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-image {
+    padding-left: 0rem;
+  }
+}
+.top-about-image img {
+  aspect-ratio: 355/237;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10rem 0 10rem 0;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .top-about-image img {
+    aspect-ratio: 624/670;
+    border-radius: 20rem 0 20rem 0;
+  }
+}
+
+.top-about-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14rem;
+}
+@media screen and (min-width: 900px) {
+  .top-about-button {
+    margin-top: 40rem;
+  }
+}
+
 /*!
 page > top > top-service
 ------------------------------

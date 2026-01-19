@@ -4,3 +4,90 @@
 page > top > top-about
 ------------------------------
 */
+.top-about {
+}
+
+.top-about-main {
+  padding-inline: 20rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+    padding-inline: 83rem 0;
+  }
+}
+
+.top-about-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 624rem;
+    gap: 59rem;
+  }
+}
+
+.top-about-text {
+  font-size: 28rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 34rem;
+  }
+}
+
+.top-about-text02 {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 8rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.top-about-text03 {
+  font-size: 16rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  margin-top: 24rem;
+
+  @include g.mq() {
+    font-size: 18rem;
+    margin-top: 32rem;
+  }
+}
+
+.top-about-image {
+  padding-left: 20rem;
+
+  @include g.mq() {
+    padding-left: 0rem;
+  }
+
+  img {
+    aspect-ratio: 355 / 237;
+    object-fit: cover;
+    border-radius: 10rem 0 10rem 0;
+    overflow: hidden;
+
+    @include g.mq() {
+      aspect-ratio: 624 / 670;
+      border-radius: 20rem 0 20rem 0;
+    }
+  }
+}
+
+.top-about-button {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 14rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+  }
+}

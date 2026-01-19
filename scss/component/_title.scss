@@ -4,3 +4,43 @@
 component > title
 ------------------------------
 */
+.c-top-title {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+
+  @include g.mq() {
+    gap: 24rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+}
+
+.c-top-title--small {
+  gap: 10rem;
+
+  @include g.mq() {
+    gap: 14rem;
+  }
+}
+
+.c-top-title-en {
+  font-family: var(--font-family-en);
+  line-height: 1;
+}
+
+.c-top-title-en--small {
+  font-size: 16rem;
+  letter-spacing: 0.075em;
+
+  @include g.mq() {
+    font-size: 20rem;
+  }
+}

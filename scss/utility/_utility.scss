@@ -36,6 +36,22 @@ utility > utility
   display: block !important;
 }
 
+.u-block-pc {
+  display: inline !important;
+
+  @include g.mq() {
+    display: block !important;
+  }
+}
+
+.u-block-sp {
+  display: block !important;
+
+  @include g.mq() {
+    display: inline !important;
+  }
+}
+
 .u-mt {
   margin-top: 64px !important;
 

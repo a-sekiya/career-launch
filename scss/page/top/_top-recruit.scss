@@ -4,3 +4,141 @@
 page > top > top-recruit
 ------------------------------
 */
+.top-recruit {
+  overflow: hidden;
+}
+
+.top-recruit-visual {
+  position: relative;
+  z-index: var(--z-index-negative);
+  aspect-ratio: 375 / 200;
+  object-fit: cover;
+
+  @include g.mq() {
+    aspect-ratio: 1366 / 350;
+  }
+}
+
+.top-recruit-background-text {
+  position: absolute;
+  bottom: -35rem;
+  left: 20rem;
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 86rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0.025em;
+
+  @include g.mq() {
+    font-size: 150rem;
+    left: 83rem;
+    bottom: -60rem;
+  }
+}
+
+.top-recruit-content {
+  margin-top: 80rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64rem;
+
+  @include g.mq() {
+    margin-top: 118rem;
+    grid-template-columns: 355rem 600rem;
+    gap: 148rem;
+    justify-content: end;
+  }
+}
+
+.top-recruit-entry {
+  position: relative;
+  width: 290rem;
+  height: 294.3rem;
+  order: 2;
+  margin-inline: auto;
+
+  @include g.mq() {
+    width: 355rem;
+    height: 360rem;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 80rem;
+    padding-inline: 0;
+  }
+}
+
+.top-recruit-entry-circle {
+  width: 100%;
+  height: 100%;
+  animation: rotation 10s linear infinite;
+}
+
+.top-recruit-entry-circle-text {
+  width: 100%;
+  height: 100%;
+  fill: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 8px;
+  letter-spacing: 1em;
+}
+
+.top-recruit-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.top-recruit-info {
+  @include g.mq() {
+    order: 2;
+  }
+}
+
+.top-recruit-text {
+  font-size: 28rem;
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 34rem;
+  }
+}
+
+.top-recruit-text02 {
+  font-size: 16rem;
+  line-height: 2.2;
+  letter-spacing: 0.05em;
+  margin-top: 24rem;
+
+  @include g.mq() {
+    font-size: 18rem;
+    margin-top: 32rem;
+  }
+}
+
+.top-recruit-text03 {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 14rem;
+
+  @include g.mq() {
+    margin-top: 24rem;
+  }
+}

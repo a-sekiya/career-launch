@@ -4,7 +4,7 @@
 component > button
 ------------------------------
 */
-.c-btn {
+.c-button {
   display: inline-flex;
   align-items: center;
   gap: 14rem;
@@ -13,17 +13,18 @@ component > button
     gap: 24rem;
   }
 
-  @media (any-hover: hover) {
-    &:hover {
-      .c-btn-icon::after {
-        // ホバー時に右にずらす
-        transform: translate(-10%, -50%);
+  &:hover {
+    .c-button-icon {
+      background-color: var(--color-primary-hover);
+
+      &::after {
+        transform: translate(10%, -50%);
       }
     }
   }
 }
 
-.c-btn-text {
+.c-button-text {
   color: var(--color-primary);
   font-family: var(--font-family-en);
   font-size: 18rem;
@@ -35,13 +36,14 @@ component > button
   }
 }
 
-.c-btn-icon {
+.c-button-icon {
   display: block;
   width: 47rem;
   height: 47rem;
   background-color: var(--color-primary);
   border-radius: 50%;
   position: relative;
+  transition: background-color 0.3s ease, filter 0.3s ease;
 
   @include g.mq() {
     width: 58rem;

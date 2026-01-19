@@ -4,3 +4,142 @@
 page > top > top-service
 ------------------------------
 */
+.top-service {
+  position: relative;
+  z-index: var(--z-index-default);
+  padding-top: 64rem;
+  margin-right: 20rem;
+
+  @include g.mq() {
+    margin-right: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: var(--z-index-negative);
+    background-color: var(--color-primary);
+    height: 500rem;
+    border-radius: 0 0 30rem 0;
+
+    @include g.mq() {
+      right: 30rem;
+      height: 410rem;
+      border-radius: 0 0 50rem 0;
+    }
+  }
+}
+
+.top-service-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 714rem;
+    gap: 65rem;
+  }
+}
+
+.top-service-header {
+  color: var(--color-white);
+}
+
+.top-service-title-en {
+  &::before {
+    background-color: var(--color-white);
+  }
+}
+
+.top-service-text {
+  margin-top: 40rem;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.top-service-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.top-service-item {
+}
+
+.top-service-item-link {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  transition: transform 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .top-service-button-icon {
+        background-color: var(--color-primary-hover);
+
+        &::after {
+          transform: translate(10%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.top-service-item-image {
+  overflow: hidden;
+  border-radius: 10rem;
+}
+
+.top-service-item-title {
+}
+
+.top-service-item-title-jp {
+  font-size: 22rem;
+  letter-spacing: 0.05em;
+}
+
+.top-service-item-title-en {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 2rem;
+  display: block;
+}
+
+.top-service-item-text {
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.top-service-button-text {
+  font-size: 16rem;
+}
+
+.top-service-button {
+  display: flex;
+  gap: 10rem;
+  justify-content: flex-end;
+}
+
+.top-service-button-icon {
+  width: 32rem;
+  height: 32rem;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+
+  &::after {
+    width: 4rem;
+    height: 4rem;
+  }
+}

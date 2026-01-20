@@ -4,3 +4,74 @@
 component > button
 ------------------------------
 */
+.c-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 14rem;
+
+  @include g.mq() {
+    gap: 24rem;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-text {
+        color: var(--color-primary-hover);
+      }
+
+      .c-button-icon {
+        background-color: var(--color-primary-hover);
+
+        &::after {
+          transform: translate(20%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.c-button-text {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+
+  @include g.mq() {
+    font-size: 20rem;
+  }
+}
+
+.c-button-icon {
+  display: block;
+  width: 47rem;
+  height: 47rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+
+  @include g.mq() {
+    width: 58rem;
+    height: 58rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    transition: transform 0.3s ease;
+
+    @include g.mq() {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

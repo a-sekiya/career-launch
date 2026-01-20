@@ -6,7 +6,7 @@ layout > header
 */
 .l-header {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 23rem 12rem;
   position: absolute;
   top: 0;
@@ -15,6 +15,7 @@ layout > header
   z-index: var(--z-index-header);
 
   @include g.mq() {
+    align-items: center;
     padding: 24rem 65rem;
   }
 }
@@ -29,8 +30,14 @@ layout > header
   }
 }
 
+.l-header-menu {
+  &::backdrop {
+    background-color: var(--color-black);
+    opacity: 0.3;
+  }
+}
+
 .l-header-menu-open {
-  margin-left: auto;
   background-color: var(--color-primary);
   width: 50rem;
   height: 50rem;
@@ -60,44 +67,107 @@ layout > header
   }
 }
 
-.l-header-menu-close {
-}
+.l-header-menu-inner {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  width: 85%;
+  height: 90%;
+  max-height: 592rem;
+  margin: 0;
+  background-color: var(--color-primary);
+  padding: 20rem 12rem 40rem 40rem;
+  border-bottom-left-radius: 30rem;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 
-.js-header-menu-close {
-}
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-.l-header-nav {
   @include g.mq() {
-    margin-left: auto;
+    display: contents;
+  }
+}
+
+.l-header-menu-close {
+  margin-left: auto;
+  background-color: var(--color-white);
+  width: 50rem;
+  height: 50rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 19.8rem;
+    height: 19.8rem;
+    background-image: url("../img/icon-cross.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @include g.mq() {
+    display: none;
   }
 }
 
 .l-header-list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 16rem;
+  transform: translateY(-27rem);
+
   @include g.mq() {
-    display: flex;
+    flex-direction: row;
+    align-items: center;
     gap: 50rem;
+    transform: translateY(0);
   }
 }
 
-.l-header-item {
-}
-
 .l-header-item-link {
+  display: inline-flex;
+  flex-direction: column;
   color: var(--color-white);
-  transition: all 0.3s ease;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
 
-  &:hover {
-    color: var(--color-font-base);
+  @include g.mq() {
+    flex-direction: row;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-size: 100% 1px;
+    }
   }
 }
 
 .l-header-item-en {
-  line-height: 1;
-  letter-spacing: 0.025em;
   font-family: var(--font-family-en);
+  font-size: 28rem;
+  letter-spacing: 0.025em;
+
+  @include g.mq() {
+    font-size: 18rem;
+    line-height: 1;
+  }
 }
 
 .l-header-item-jp {
+  font-size: 14rem;
+  letter-spacing: 0.025em;
+
   @include g.mq() {
     display: none;
   }
@@ -112,6 +182,11 @@ layout > header
     display: inline-flex;
     align-items: center;
 
+    &:active {
+      transform: translateY(0);
+      box-shadow: var(--color-button-shadow-active);
+    }
+
     &::before {
       content: "";
       display: inline-block;
@@ -119,22 +194,21 @@ layout > header
       margin-right: 9rem;
       width: 16rem;
       height: 13rem;
-      background-image: url("../img/icon-mail.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      mask-image: url("../img/icon-mail.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--color-white);
     }
 
-    &:hover {
-      background-color: var(--color-primary-hover);
-      transform: translateY(-2rem);
-      box-shadow: var(--color-button-shadow-hover);
-      color: var(--color-white);
-    }
-
-    &:active {
-      transform: translateY(0);
-      box-shadow: var(--color-button-shadow-active);
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: var(--color-primary-hover);
+        transform: translateY(-2rem);
+        box-shadow: var(--color-button-shadow-hover);
+        color: var(--color-white);
+        background-size: 0;
+      }
     }
   }
 }

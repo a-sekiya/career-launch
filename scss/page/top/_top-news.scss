@@ -4,3 +4,54 @@
 page > top > top-news
 ------------------------------
 */
+.top-news {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: 112rem;
+    z-index: var(--z-index-negative);
+    background-color: var(--color-bg-extra-light);
+    border-radius: 50rem 0 0 0;
+
+    @include g.mq {
+      left: 286rem;
+    }
+  }
+}
+
+.top-news-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-block: 40rem 60rem;
+
+  @include g.mq {
+    grid-template-columns: 221rem 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 80rem 218rem;
+    align-items: start;
+    padding: 96rem 0;
+  }
+}
+
+.top-news-button {
+  order: 1;
+  margin-top: 32rem;
+  margin-left: auto;
+
+  @include g.mq {
+    margin: 0;
+  }
+}
+
+.top-news-list {
+  margin-top: 48rem;
+
+  @include g.mq {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin-top: 0;
+  }
+}

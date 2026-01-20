@@ -18,8 +18,44 @@ utility > utility
   margin: -1px !important;
 }
 
+.u-pc-only {
+  display: none;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
 .u-sp-only {
   @include g.mq() {
     display: none;
+  }
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-block-pc {
+  display: inline !important;
+
+  @include g.mq() {
+    display: block !important;
+  }
+}
+
+.u-block-sp {
+  display: block !important;
+
+  @include g.mq() {
+    display: inline !important;
+  }
+}
+
+.u-mt {
+  margin-top: 64rem !important;
+
+  @include g.mq() {
+    margin-top: 96rem !important;
   }
 }

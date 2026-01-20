@@ -4,3 +4,66 @@
 component > title
 ------------------------------
 */
+.c-top-title {
+  display: flex;
+  flex-direction: column;
+  gap: 14rem;
+
+  @include g.mq() {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.c-top-title-en {
+  display: flex;
+  align-items: center;
+  gap: 18rem;
+  font-family: var(--font-family-en);
+  font-weight: 400;
+  font-size: 40rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+  }
+
+  @include g.mq() {
+    gap: 24rem;
+    font-size: 50rem;
+  }
+}
+
+.c-top-title-en--small {
+  gap: 10rem;
+  font-size: 16rem;
+  letter-spacing: 0.075em;
+
+  &::before {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  @include g.mq() {
+    gap: 14rem;
+    font-size: 20rem;
+  }
+}
+
+.c-top-title-jp {
+  font-size: 14rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-left: 28rem;
+  color: var(--color-font-light);
+
+  @include g.mq() {
+    margin-left: 0;
+  }
+}

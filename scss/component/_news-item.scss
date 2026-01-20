@@ -4,3 +4,53 @@
 component > news-item
 ------------------------------
 */
+.c-news-post {
+  border-bottom: 1rem solid var(--color-border);
+}
+
+.c-news-post-link {
+  padding: 16rem 10rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem 16rem;
+  transition: color 0.3s, transform 0.3s;
+
+  @include g.mq() {
+    padding: 24rem 20rem;
+    grid-template-columns: 62rem 1fr;
+    gap: 40rem;
+    align-items: center;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-primary);
+      transform: translateX(8rem);
+
+      .c-news-post-date {
+        color: var(--color-primary);
+      }
+    }
+  }
+}
+
+.c-news-post-date {
+  color: var(--color-font-light);
+  font-family: var(--font-family-en);
+  font-size: 13rem;
+  letter-spacing: 0.025em;
+  transition: color 0.3s;
+
+  @include g.mq() {
+    font-size: 14rem;
+  }
+}
+
+.c-news-post-title {
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 18rem;
+  }
+}

@@ -83,11 +83,19 @@ page > top > top-service
 
   @media (any-hover: hover) {
     &:hover {
+      .top-service-item-image img {
+        transform: scale(1.1);
+      }
+
+      .top-service-button-text {
+        color: var(--color-primary-hover);
+      }
+
       .top-service-button-icon {
         background-color: var(--color-primary-hover);
 
         &::after {
-          transform: translate(10%, -50%);
+          transform: translate(20%, -50%);
         }
       }
     }
@@ -97,6 +105,10 @@ page > top > top-service
 .top-service-item-image {
   overflow: hidden;
   border-radius: 10rem;
+
+  img {
+    transition: transform 0.6s ease;
+  }
 }
 
 .top-service-item-title-jp {

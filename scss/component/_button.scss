@@ -13,12 +13,18 @@ component > button
     gap: 24rem;
   }
 
-  &:hover {
-    .c-button-icon {
-      background-color: var(--color-primary-hover);
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-text {
+        color: var(--color-primary-hover);
+      }
 
-      &::after {
-        transform: translate(10%, -50%);
+      .c-button-icon {
+        background-color: var(--color-primary-hover);
+
+        &::after {
+          transform: translate(20%, -50%);
+        }
       }
     }
   }
@@ -30,6 +36,7 @@ component > button
   font-size: 18rem;
   line-height: 1;
   letter-spacing: 0.05em;
+  transition: color 0.3s ease;
 
   @include g.mq() {
     font-size: 20rem;
@@ -55,7 +62,7 @@ component > button
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
+    transform: translate(-50%, -50%);
     width: 5rem;
     height: 5rem;
     border-radius: 50%;

@@ -13,7 +13,7 @@ component > news-item
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem 16rem;
-  transition: color 0.3s;
+  transition: color 0.3s, transform 0.3s;
 
   @include g.mq() {
     padding: 24rem 20rem;
@@ -25,6 +25,11 @@ component > news-item
   @media (any-hover: hover) {
     &:hover {
       color: var(--color-primary);
+      transform: translateX(8rem);
+
+      .c-news-post-date {
+        color: var(--color-primary);
+      }
     }
   }
 }
@@ -34,6 +39,7 @@ component > news-item
   font-family: var(--font-family-en);
   font-size: 13rem;
   letter-spacing: 0.025em;
+  transition: color 0.3s;
 
   @include g.mq() {
     font-size: 14rem;

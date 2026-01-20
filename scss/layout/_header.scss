@@ -136,7 +136,11 @@ layout > header
   display: inline-flex;
   flex-direction: column;
   color: var(--color-white);
-  transition: all 0.3s ease;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-size: 0 1px;
+  background-repeat: no-repeat;
+  transition: background-size 0.3s;
 
   @include g.mq() {
     flex-direction: row;
@@ -144,7 +148,7 @@ layout > header
 
   @media (any-hover: hover) {
     &:hover {
-      color: var(--color-font-base);
+      background-size: 100% 1px;
     }
   }
 }
@@ -190,10 +194,11 @@ layout > header
       margin-right: 9rem;
       width: 16rem;
       height: 13rem;
-      background-image: url("../img/icon-mail.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
+      mask-image: url("../img/icon-mail.svg");
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: var(--color-white);
     }
 
     @media (any-hover: hover) {
@@ -202,6 +207,7 @@ layout > header
         transform: translateY(-2rem);
         box-shadow: var(--color-button-shadow-hover);
         color: var(--color-white);
+        background-size: 0;
       }
     }
   }

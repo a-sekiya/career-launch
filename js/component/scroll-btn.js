@@ -1,16 +1,17 @@
 /**
- * トップKVのScrollボタン
+ * トップページ：Scrollボタン
  */
 export const initializeScrollBtn = () => {
   const scrollBtn = document.querySelector(".js-top-kv-scroll");
+  const targetSection = document.querySelector(".js-top-about");
 
-  if (!scrollBtn) return;
+  if (!scrollBtn || !targetSection) return;
 
   scrollBtn.addEventListener("click", () => {
-    const vh = window.innerHeight;
+    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset;
 
     window.scrollTo({
-      top: vh,
+      top: targetPosition,
       behavior: "smooth",
     });
   });

@@ -71,7 +71,6 @@ page > top > top-recruit
 .top-recruit-entry-circle {
   width: 100%;
   height: 100%;
-  animation: rotation 10s linear infinite;
 }
 
 .top-recruit-entry-circle-text {
@@ -91,15 +90,6 @@ page > top > top-recruit
   display: flex;
   align-items: center;
   white-space: nowrap;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .top-recruit-info {

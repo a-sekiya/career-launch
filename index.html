@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 
     <!-- noindex -->
@@ -88,8 +90,8 @@
         <div class="top-kv-text-wrap">
           <div class="l-container">
             <div class="top-kv-text-inner">
-              <p class="top-kv-text">Shape your future,<span class="u-block">your way.</span></p>
-              <p class="top-kv-text02">自分らしさが、キャリアになる。</p>
+              <p class="top-kv-text js-top-kv-text">Shape your future,<span class="u-block">your way.</span></p>
+              <p class="top-kv-text02 js-top-kv-text02">自分らしさが、キャリアになる。</p>
             </div>
           </div>
         </div>
@@ -103,9 +105,9 @@
         </div>
       </div>
 
-      <section class="top-about u-mt">
+      <section class="top-about u-mt js-top-about">
         <div class="top-about-inner">
-          <div class="top-about-main l-container">
+          <div class="top-about-main l-container js-top-about-main">
             <div class="c-top-title c-top-title--small">
               <h2 class="c-top-title-en c-top-title-en--small">About</h2>
             </div>
@@ -123,7 +125,7 @@
             </div>
           </div>
 
-          <div class="top-about-image">
+          <div class="top-about-image js-top-about-image">
             <picture>
               <source media="(max-width: 899px)" srcset="img/top/top-about-sp.jpg" />
               <img width="624" height="670" src="img/top/top-about.jpg" alt="リクルートスーツを着て前向きに歩く就活生の男性" decoding="async" />
@@ -134,7 +136,7 @@
 
       <section class="top-service u-mt">
         <div class="top-service-inner l-container">
-          <div class="top-service-header">
+          <div class="top-service-header js-top-service-header">
             <div class="c-top-title">
               <h2 class="c-top-title-en top-service-title-en">Service</h2>
               <span class="c-top-title-jp top-service-title-jp">サービス</span>
@@ -142,7 +144,7 @@
             <p class="top-service-text">就活の「不安」を「自信」に変える2つのプログラム。<br />自己理解から実践対策まで、一人ひとりに合わせて丁寧にサポートします。</p>
           </div>
 
-          <ul class="top-service-list">
+          <ul class="top-service-list js-top-service-list">
             <li class="top-service-item">
               <a href="service.html#service-item" class="top-service-item-link">
                 <picture class="top-service-item-image">
@@ -182,9 +184,9 @@
         </div>
       </section>
 
-      <section class="top-recruit u-mt">
+      <section class="top-recruit u-mt js-top-recruit">
         <div class="top-recruit-visual">
-          <picture class="top-recruit-image">
+          <picture class="top-recruit-image js-top-recruit-image">
             <source media="(max-width: 899px)" srcset="img/top/top-recruit-sp.jpg" />
             <img src="img/top/top-recruit.jpg" width="1366" height="350" alt="日差しが差し込む明るいオフィス" decoding="async" />
           </picture>
@@ -193,7 +195,7 @@
 
         <div class="top-recruit-content l-container">
           <div class="top-recruit-entry">
-            <div class="top-recruit-entry-circle">
+            <div class="top-recruit-entry-circle js-top-recruit-circle">
               <svg viewBox="0 0 100 100" aria-hidden="true">
                 <path id="circlePath" d="M 50, 50 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" fill="none" />
                 <text class="top-recruit-entry-circle-text">
@@ -202,13 +204,13 @@
               </svg>
             </div>
 
-            <a href="recruit.html" class="c-button top-recruit-button">
+            <a href="recruit.html" class="c-button top-recruit-button js-top-recruit-button">
               <span class="c-button-text">Entry Form</span>
               <span class="c-button-icon"></span>
             </a>
           </div>
 
-          <div class="top-recruit-info">
+          <div class="top-recruit-info js-top-recruit-info">
             <div class="c-top-title c-top-title--small">
               <h2 class="c-top-title-en c-top-title-en--small">Recruit</h2>
             </div>
@@ -222,16 +224,16 @@
 
       <section class="top-news u-mt">
         <div class="l-container">
-          <div class="top-news-inner">
-            <div class="c-top-title">
+          <div class="top-news-inner js-top-news-inner">
+            <div class="c-top-title js-top-news-title">
               <h2 class="c-top-title-en">News</h2>
               <span class="c-top-title-jp">お知らせ</span>
             </div>
-            <a href="news.html" class="c-button top-news-button">
+            <a href="news.html" class="c-button top-news-button js-top-news-button">
               <span class="c-button-text">View more</span>
               <span class="c-button-icon"></span>
             </a>
-            <div class="top-news-list">
+            <div class="top-news-list js-top-news-list">
               <article class="c-news-post">
                 <a href="news.html" class="c-news-post-link">
                   <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>

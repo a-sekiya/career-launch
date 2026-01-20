@@ -307,11 +307,11 @@ utility > utility
 }
 
 .u-mt {
-  margin-top: 64px !important;
+  margin-top: 64rem !important;
 }
 @media screen and (min-width: 900px) {
   .u-mt {
-    margin-top: 96px !important;
+    margin-top: 96rem !important;
   }
 }
 
@@ -1430,8 +1430,6 @@ page > top > top-recruit
 .top-recruit-entry-circle {
   width: 100%;
   height: 100%;
-  -webkit-animation: rotation 10s linear infinite;
-          animation: rotation 10s linear infinite;
 }
 
 .top-recruit-entry-circle-text {
@@ -1453,23 +1451,6 @@ page > top > top-recruit
   white-space: nowrap;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 @media screen and (min-width: 900px) {
   .top-recruit-info {
     order: 2;

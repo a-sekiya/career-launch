@@ -52,6 +52,10 @@ page > top > top-service
   }
 }
 
+.top-service-title-jp {
+  color: var(--color-white);
+}
+
 .top-service-text {
   margin-top: 40rem;
   letter-spacing: 0.05em;
@@ -69,9 +73,6 @@ page > top > top-service
   @include g.mq() {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-.top-service-item {
 }
 
 .top-service-item-link {
@@ -96,9 +97,6 @@ page > top > top-service
 .top-service-item-image {
   overflow: hidden;
   border-radius: 10rem;
-}
-
-.top-service-item-title {
 }
 
 .top-service-item-title-jp {

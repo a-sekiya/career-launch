@@ -61,6 +61,7 @@ component > title
   line-height: 1;
   letter-spacing: 0.05em;
   transform: translateX(28rem);
+  color: var(--color-font-light);
 
   @include g.mq() {
     transform: translateX(0);

@@ -606,6 +606,7 @@ layout > header
   border-radius: 50%;
   display: grid;
   place-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 .l-header-menu-open::before {
   content: "";
@@ -616,6 +617,9 @@ layout > header
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.l-header-menu-open:focus {
+  outline: none;
 }
 @media screen and (min-width: 900px) {
   .l-header-menu-open {
@@ -663,6 +667,7 @@ layout > header
   border-radius: 50%;
   display: grid;
   place-items: center;
+  -webkit-tap-highlight-color: transparent;
 }
 .l-header-menu-close::before {
   content: "";
@@ -673,6 +678,9 @@ layout > header
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.l-header-menu-close:focus {
+  outline: none;
 }
 @media screen and (min-width: 900px) {
   .l-header-menu-close {

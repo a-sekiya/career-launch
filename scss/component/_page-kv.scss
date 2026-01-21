@@ -4,3 +4,51 @@
 component > page-kv
 ------------------------------
 */
+.c-page-kv {
+  background-color: var(--color-bg-light);
+  padding: 142rem 0 84rem;
+  position: relative;
+
+  @include g.mq() {
+    padding: 161rem 0 116rem;
+  }
+}
+
+.c-page-kv-en {
+  font-family: var(--font-family-en);
+  font-weight: 300;
+  font-size: 55rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  display: inline-block;
+
+  @include g.mq() {
+    font-size: 72rem;
+  }
+}
+
+.c-page-kv-title {
+  color: var(--color-font-light);
+  line-height: 1;
+  margin-top: 22rem;
+
+  @include g.mq() {
+    font-size: 18rem;
+    margin-top: 28rem;
+  }
+}
+
+.c-page-kv-outer {
+  position: absolute;
+  width: 100%;
+  height: 64rem;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-white);
+  border-radius: 30rem 0 0 0;
+
+  @include g.mq() {
+    height: 96rem;
+    border-radius: 50rem 0 0 0;
+  }
+}

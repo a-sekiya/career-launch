@@ -110,13 +110,10 @@ page > top > top-recruit
 }
 
 .top-recruit-text02 {
-  font-size: 16rem;
   line-height: 2.2;
-  letter-spacing: 0.05em;
   margin-top: 24rem;
 
   @include g.mq() {
-    font-size: 18rem;
     margin-top: 32rem;
   }
 }

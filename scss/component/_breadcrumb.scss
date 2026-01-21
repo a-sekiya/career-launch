@@ -4,3 +4,62 @@
 component > breadcrumb
 ------------------------------
 */
+.c-breadcrumb {
+  margin-top: 32rem;
+  width: 100%;
+
+  @include g.mq() {
+    margin-top: 56rem;
+  }
+}
+
+.c-breadcrumb-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+
+.c-breadcrumb-item {
+  color: var(--color-font-light);
+  font-family: var(--font-family-en);
+  font-size: 14rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+  transition: 0.3s;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/icon-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 9rem;
+    height: 9rem;
+  }
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.c-breadcrumb-item-link {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.c-breadcrumb-item--current {
+  color: var(--color-primary);
+
+  &::after {
+    display: none;
+  }
+}

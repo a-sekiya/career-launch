@@ -85,20 +85,20 @@ layout > footer
 .l-footer-item-link {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
-  background-size: 0 1px;
+  background-size: 0 1rem;
   background-repeat: no-repeat;
   transition: background-size 0.3s;
 
   @media (any-hover: hover) {
     &:hover {
-      background-size: 100% 1px;
+      background-size: 100% 1rem;
     }
   }
 }
 
 .l-footer-item-link--contact {
   padding: 9rem 0;
-  border: 1px solid var(--color-white);
+  border: 1rem solid var(--color-white);
   border-radius: 100vh;
   transition: all 0.3s ease;
   display: flex;
@@ -126,8 +126,8 @@ layout > footer
       &:hover {
         background-color: var(--color-white);
         color: var(--color-font-base);
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px var(--color-button-shadow-hover);
+        transform: translateY(-2rem);
+        box-shadow: 0 4rem 15rem var(--color-button-shadow-hover);
 
         &::before {
           background-color: var(--color-font-base);
@@ -165,13 +165,13 @@ layout > footer
 .l-footer-item02-link {
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
-  background-size: 0 1px;
+  background-size: 0 1rem;
   background-repeat: no-repeat;
   transition: background-size 0.3s;
 
   @media (any-hover: hover) {
     &:hover {
-      background-size: 100% 1px;
+      background-size: 100% 1rem;
     }
   }
 }

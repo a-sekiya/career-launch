@@ -19,16 +19,14 @@ export const initializeHamburgerMenu = () => {
   const openMenu = () => {
     if (isAnimating) return;
     isAnimating = true;
-
     initializeHeaderBackgroundToggle(true);
     menu.showModal();
-
     const openingAnim = menu.animate(openingKeyframes, options);
     openingAnim.onfinish = () => (isAnimating = false);
   };
 
   const closeMenu = () => {
-    if (isAnimating) return;
+    if (isAnimating || !menu.open) return;
     isAnimating = true;
 
     const closingAnim = menu.animate(closingKeyframes, options);
@@ -39,8 +37,19 @@ export const initializeHamburgerMenu = () => {
     };
   };
 
+  const handleResize = () => {
+    if (window.innerWidth >= 900 && menu.open) {
+      menu.close();
+      initializeHeaderBackgroundToggle(false);
+      isAnimating = false;
+      menu.style.opacity = "";
+    }
+  };
+
   openButton.addEventListener("click", openMenu);
   closeButton.addEventListener("click", closeMenu);
+
+  window.addEventListener("resize", handleResize);
 
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape" && menu.open) {

@@ -93,6 +93,10 @@ layout > header
     display: none;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   @include g.mq() {
     display: contents;
   }
@@ -129,6 +133,7 @@ layout > header
 }
 
 .l-header-list {
+  color: var(--color-white);
   display: inline-flex;
   flex-direction: column;
   gap: 16rem;
@@ -142,13 +147,18 @@ layout > header
   }
 }
 
+.l-header-list--page {
+  @include g.mq() {
+    color: var(--color-font-base);
+  }
+}
+
 .l-header-item-link {
   display: inline-flex;
   flex-direction: column;
-  color: var(--color-white);
   background-image: linear-gradient(currentColor, currentColor);
   background-position: 0 100%;
-  background-size: 0 1px;
+  background-size: 0 1rem;
   background-repeat: no-repeat;
   transition: background-size 0.3s;
 
@@ -158,8 +168,14 @@ layout > header
 
   @media (any-hover: hover) {
     &:hover {
-      background-size: 100% 1px;
+      background-size: 100% 1rem;
     }
+  }
+}
+
+.l-header-item-link--current {
+  @include g.mq() {
+    color: var(--color-primary);
   }
 }
 
@@ -185,6 +201,7 @@ layout > header
 
 .l-header-item-link--contact {
   @include g.mq() {
+    color: var(--color-white);
     background-color: var(--color-primary);
     padding: 10rem 32rem;
     border-radius: 100vh;

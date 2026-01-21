@@ -40,7 +40,6 @@ page > top > top-about
   color: var(--color-primary);
   font-family: var(--font-family-en);
   font-size: 15rem;
-  letter-spacing: 0.05em;
   margin-top: 8rem;
 
   @include g.mq() {
@@ -51,7 +50,6 @@ page > top > top-about
 .top-about-text03 {
   font-size: 16rem;
   line-height: 2.2;
-  letter-spacing: 0.05em;
   margin-top: 24rem;
 
   @include g.mq() {

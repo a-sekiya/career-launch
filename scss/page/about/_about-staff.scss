@@ -4,3 +4,129 @@
 page > about > about-staff
 ------------------------------
 */
+.about-staff {
+  position: relative;
+  z-index: var(--z-index-default);
+  padding-top: 40rem;
+  padding-left: 20rem;
+
+  @include g.mq() {
+    padding-top: 54rem;
+    padding-left: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    right: 20rem;
+    z-index: var(--z-index-negative);
+    background-color: var(--color-primary);
+    height: 430rem;
+    border-radius: 0 0 0 50rem;
+
+    @include g.mq() {
+      right: 0;
+      left: 40rem;
+      height: 390rem;
+    }
+  }
+}
+
+.about-staff-header {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+  padding: 0 40rem 0 0;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 0;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 83rem;
+  }
+}
+
+.about-staff-text {
+  font-size: 16rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+}
+
+.about-staff-splide {
+  margin-top: 40rem;
+
+  @include g.mq() {
+    margin-top: 64rem;
+  }
+}
+
+.about-staff-item-image-wrapper {
+}
+
+.about-staff-item-image {
+  width: 230rem;
+  height: 230rem;
+  overflow: hidden;
+  border-radius: 10rem;
+
+  @include g.mq() {
+    width: 285rem;
+    height: 285rem;
+  }
+}
+
+.about-staff-item-content {
+  margin-top: 16rem;
+}
+
+.about-staff-item-post {
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+
+  &::before {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+  }
+}
+
+.about-staff-item-name-group {
+  display: flex;
+  align-items: baseline;
+  gap: 16rem;
+
+  @include g.mq() {
+    align-items: center;
+  }
+}
+
+.about-staff-item-name {
+  font-size: 20rem;
+  line-height: 1.7;
+  letter-spacing: 0.075em;
+
+  @include g.mq() {
+    font-size: 24rem;
+  }
+}
+
+.about-staff-item-en {
+  font-family: var(--font-family-en);
+  color: var(--color-font-light);
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 15rem;
+  }
+}

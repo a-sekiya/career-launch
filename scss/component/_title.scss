@@ -4,7 +4,7 @@
 component > title
 ------------------------------
 */
-.c-top-title {
+.c-title {
   display: flex;
   flex-direction: column;
   gap: 14rem;
@@ -15,7 +15,7 @@ component > title
   }
 }
 
-.c-top-title-en {
+.c-title-en {
   display: flex;
   align-items: center;
   gap: 18rem;
@@ -40,7 +40,7 @@ component > title
   }
 }
 
-.c-top-title-en--small {
+.c-title-en--small {
   gap: 10rem;
   font-size: 16rem;
   letter-spacing: 0.075em;
@@ -56,7 +56,13 @@ component > title
   }
 }
 
-.c-top-title-jp {
+.c-title-en--white {
+  &::before {
+    background-color: var(--color-white);
+  }
+}
+
+.c-title-jp {
   font-size: 14rem;
   line-height: 1;
   letter-spacing: 0.05em;
@@ -66,4 +72,8 @@ component > title
   @include g.mq() {
     margin-left: 0;
   }
+}
+
+.c-title-jp--white {
+  color: var(--color-white);
 }

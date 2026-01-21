@@ -46,16 +46,6 @@ page > top > top-service
   color: var(--color-white);
 }
 
-.top-service-title-en {
-  &::before {
-    background-color: var(--color-white);
-  }
-}
-
-.top-service-title-jp {
-  color: var(--color-white);
-}
-
 .top-service-text {
   margin-top: 40rem;
   letter-spacing: 0.05em;

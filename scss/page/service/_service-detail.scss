@@ -16,8 +16,8 @@ page > service > service-detail
 }
 
 .service-detail-item {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--color-bg-light);
   border-radius: 10rem;
   padding: 0 0 40rem 0;
@@ -26,15 +26,20 @@ page > service > service-detail
 
   @include g.mq() {
     background-color: transparent;
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
     margin-top: 0;
 
-    &:nth-child(even) {
-      flex-direction: row-reverse;
+    &:nth-child(odd) {
+      .service-detail-item-content {
+        order: 1;
+      }
+      .service-detail-item-img {
+        order: 2;
 
-      .service-detail-item-img img {
-        border-radius: 14rem 0 0 14rem;
+        & img {
+          border-radius: 0 14rem 14rem 0;
+        }
       }
     }
   }
@@ -50,7 +55,6 @@ page > service > service-detail
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 600rem;
   }
 }
 
@@ -143,7 +147,6 @@ page > service > service-detail
   @include g.mq() {
     margin-top: 0;
     padding: 0;
-    flex: 0 0 600rem;
   }
 
   & img {
@@ -151,7 +154,9 @@ page > service > service-detail
     border-radius: 10rem;
 
     @include g.mq() {
-      border-radius: 0 14rem 14rem 0;
+      border-radius: 14rem 0 0 14rem;
+      height: 100%;
+      object-fit: cover;
     }
   }
 }

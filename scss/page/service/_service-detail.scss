@@ -4,3 +4,154 @@
 page > service > service-detail
 ------------------------------
 */
+
+.service-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 64rem;
+
+  @include g.mq() {
+    gap: 80rem;
+  }
+}
+
+.service-detail-item {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: var(--color-bg-light);
+  border-radius: 10rem;
+  padding: 0 0 40rem 0;
+  margin-top: 20rem;
+  scroll-margin-top: 40rem;
+
+  @include g.mq() {
+    background-color: transparent;
+    flex-direction: row;
+    padding: 0;
+    margin-top: 0;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .service-detail-item-img img {
+        border-radius: 14rem 0 0 14rem;
+      }
+    }
+  }
+}
+
+.service-detail-item-content {
+  background-color: var(--color-bg-light);
+  padding: 0 24rem;
+
+  @include g.mq() {
+    background-color: var(--color-bg-extra-light);
+    padding: 48rem 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 600rem;
+  }
+}
+
+.service-detail-item-title {
+  font-size: 20rem;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 28rem;
+  }
+}
+
+.service-detail-item-sub {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 4rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.service-detail-item-info {
+  color: var(--color-font-light);
+  font-size: 14rem;
+  letter-spacing: 0.05em;
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.service-detail-item-text {
+  margin-top: 16rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+.service-detail-item-list {
+  margin-top: 24rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+
+  @include g.mq() {
+    margin-top: 32rem;
+  }
+}
+
+.service-detail-item-item {
+  color: var(--color-white);
+  font-size: 16rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  padding: 20rem;
+  background-color: var(--color-primary);
+  border-radius: 6rem;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    mask-image: url("../img/icon-check.svg");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--color-white);
+    width: 24rem;
+    height: 24rem;
+    margin-right: 14rem;
+    flex-shrink: 0;
+  }
+
+  @include g.mq() {
+    padding: 20rem 24rem;
+  }
+}
+
+.service-detail-item-img {
+  margin-top: -20rem;
+  padding: 0 24rem 24rem;
+
+  @include g.mq() {
+    margin-top: 0;
+    padding: 0;
+    flex: 0 0 600rem;
+  }
+
+  & img {
+    overflow: hidden;
+    border-radius: 10rem;
+
+    @include g.mq() {
+      border-radius: 0 14rem 14rem 0;
+    }
+  }
+}

@@ -4,3 +4,101 @@
 page > service > service-case
 ------------------------------
 */
+.service-case {
+  margin-bottom: 64rem;
+
+  @include g.mq() {
+    margin-bottom: 96rem;
+  }
+}
+
+.service-case-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40rem;
+  margin-top: 40rem;
+
+  @include g.mq() {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 39rem;
+    margin-top: 54rem;
+  }
+}
+
+.service-case-item-link {
+  transition: transform 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      .service-case-item-image img {
+        transform: scale(1.1);
+      }
+
+      .service-case-button-text {
+        color: var(--color-primary-hover);
+      }
+
+      .service-case-button-icon {
+        background-color: var(--color-primary-hover);
+
+        &::after {
+          transform: translate(20%, -50%);
+        }
+      }
+    }
+  }
+}
+
+.service-case-item-image {
+  overflow: hidden;
+  border-radius: 10rem;
+
+  @include g.mq() {
+    border-radius: 12rem;
+
+    img {
+      transition: transform 0.6s ease;
+    }
+  }
+}
+
+.service-case-item-content {
+  margin-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+}
+
+.service-case-button {
+  display: flex;
+  gap: 10rem;
+  justify-content: flex-end;
+}
+
+.service-case-attribute {
+  font-size: 14rem;
+  letter-spacing: 0.075em;
+}
+
+.case-item-attribute-accent {
+  color: var(--color-font-light);
+}
+
+.service-case-title {
+  line-height: 1.6;
+}
+
+.service-case-button-text {
+  font-size: 16rem;
+}
+
+.service-case-button-icon {
+  width: 32rem;
+  height: 32rem;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+
+  &::after {
+    width: 4rem;
+    height: 4rem;
+  }
+}

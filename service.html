@@ -21,10 +21,244 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 
     <!-- noindex -->
     <meta name="robots" content="noindex" />
   </head>
-  <body></body>
+  <body>
+    <header class="l-header js-header">
+      <div class="l-header-logo">
+        <a href="index.html">
+          <img src="img/logo.svg" width="251" height="46" alt="Career Launch" decoding="sync" class="l-header-logo-image" />
+        </a>
+      </div>
+
+      <button class="l-header-menu-open js-header-menu-open"><span class="u-visually-hidden">メニューを開く</span></button>
+
+      <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
+        <div class="l-header-menu-inner js-header-menu-background">
+          <button class="l-header-menu-close u-sp-only js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
+          <nav class="l-header-nav" aria-label="グローバルナビゲーション">
+            <ul class="l-header-list l-header-list--page">
+              <li class="l-header-item u-sp-only">
+                <a href="index.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Top</span>
+                  <span class="l-header-item-jp">トップ</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="about.html" class="l-header-item-link l-header-item-link--current">
+                  <span class="l-header-item-en">About</span>
+                  <span class="l-header-item-jp">私たちについて</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="service.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Service</span>
+                  <span class="l-header-item-jp">サービス</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="news.html" class="l-header-item-link">
+                  <span class="l-header-item-en">News</span>
+                  <span class="l-header-item-jp">お知らせ</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="recruit.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Recruit</span>
+                  <span class="l-header-item-jp">採用情報</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="contact.html" class="l-header-item-link l-header-item-link--contact">
+                  <span class="l-header-item-en">Contact</span>
+                  <span class="l-header-item-jp">お問い合わせ</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </dialog>
+    </header>
+
+    <main>
+      <div class="c-page-kv">
+        <div class="l-container">
+          <div class="c-page-title">
+            <span class="c-page-kv-en js-page-kv-en">Service</span>
+            <h1 class="c-page-kv-title js-page-kv-title">サービス</h1>
+          </div>
+          <nav class="c-breadcrumb" aria-label="パンくずリスト">
+            <ol class="c-breadcrumb-list">
+              <li class="c-breadcrumb-item"><a href="../index.html" class="c-breadcrumb-item-link">Top</a></li>
+              <li class="c-breadcrumb-item c-breadcrumb-item--current">Service</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="c-page-kv-outer" aria-hidden="true"></div>
+      </div>
+
+      <div class="service-detail l-container">
+        <section class="service-detail-item js-service-detail-item" id="service">
+          <div class="service-detail-item-content js-service-detail-item-content">
+            <h2 class="service-detail-item-title">キャリア設計サポート</h2>
+            <p class="service-detail-item-sub">Ministry of Education</p>
+            <p class="service-detail-item-info">期間: 4週間（週1回・計4回） 形式: 個別指導 + 少人数グループワーク</p>
+            <p class="service-detail-item-text">自己理解からはじまる“納得のいく選択”。<span class="u-block-pc">価値観・強み・志向性を明確にし、将来の軸をつくります。</span></p>
+            <ul class="service-detail-item-list">
+              <li class="service-detail-item-item">
+                <span class="service-detail-item-label">自己分析ワークショップ<span class="u-block-sp">（価値観・強み診断）</span></span>
+              </li>
+              <li class="service-detail-item-item">業界・職種研究セッション</li>
+              <li class="service-detail-item-item">キャリアビジョン設計サポート</li>
+            </ul>
+          </div>
+          <picture class="service-detail-item-img js-service-detail-item-img">
+            <source media="(max-width: 899px)" srcset="img/service/service-sp.jpg" />
+            <img src="img/service/service.jpg" width="600" height="545" alt="キャリア設計サポートの様子" decoding="async" />
+          </picture>
+        </section>
+
+        <section class="service-detail-item js-service-detail-item" id="service02">
+          <div class="service-detail-item-content js-service-detail-item-content">
+            <h2 class="service-detail-item-title">実践対策プログラム</h2>
+            <p class="service-detail-item-sub">Job Preparation Bootcamp</p>
+            <p class="service-detail-item-info">期間: 6週間（週2回・計12回）形式: 個別指導 + 実践形式グループ演習</p>
+            <p class="service-detail-item-text">書ける・話せる・伝わる就活力を。<span class="u-block">ES添削、模擬面接、GD演習など、実戦的なサポートを行います。</span></p>
+            <ul class="service-detail-item-list">
+              <li class="service-detail-item-item">ES添削・文章表現力向上トレーニング</li>
+              <li class="service-detail-item-item">模擬面接・フィードバックセッション</li>
+              <li class="service-detail-item-item">グループディスカッション実践演習</li>
+            </ul>
+          </div>
+          <picture class="service-detail-item-img js-service-detail-item-img">
+            <source media="(max-width: 899px)" srcset="img/service/service02-sp.jpg" />
+            <img src="img/service/service02.jpg" width="600" height="545" alt="実践対策プログラムの様子" decoding="async" />
+          </picture>
+        </section>
+      </div>
+
+      <section class="service-case u-mt l-container">
+        <div class="c-title">
+          <h2 class="c-title-en">Case</h2>
+          <span class="c-title-jp">活用事例</span>
+        </div>
+        <div class="service-case-list js-service-case-list">
+          <article class="service-case-item js-service-case-item">
+            <a href="#" class="service-case-item-link">
+              <div class="service-case-item-image">
+                <img src="img/service/case.jpg" width="374" height="249" alt="金融業界に内定した卒業生のインタビューの様子" decoding="async" />
+              </div>
+              <div class="service-case-item-content">
+                <p class="service-case-attribute"><span class="case-item-attribute-accent">経済学部から</span>金融業界に就職</p>
+                <h3 class="service-case-title">自己分析で『人をサポートする力』が自分の核だと発見できました。</h3>
+                <div class="service-case-button c-button">
+                  <span class="c-button-text service-case-button-text">View more</span>
+                  <span class="c-button-icon service-case-button-icon"></span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="service-case-item js-service-case-item">
+            <a href="#" class="service-case-item-link">
+              <div class="service-case-item-image">
+                <img src="img/service/case02.jpg" width="374" height="249" alt="IT業界に内定した卒業生のインタビューの様子" decoding="async" />
+              </div>
+              <div class="service-case-item-content">
+                <p class="service-case-attribute"><span class="case-item-attribute-accent">文学部から</span>IT業界に就職</p>
+                <h3 class="service-case-title">文系でも論理思考力でIT業界に挑戦できると気づけました。</h3>
+                <div class="service-case-button c-button">
+                  <span class="c-button-text service-case-button-text">View more</span>
+                  <span class="c-button-icon service-case-button-icon"></span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="service-case-item js-service-case-item">
+            <a href="#" class="service-case-item-link">
+              <div class="service-case-item-image">
+                <img src="img/service/case03.jpg" width="374" height="249" alt="自動車メーカーに内定した卒業生のインタビューの様子" decoding="async" />
+              </div>
+              <div class="service-case-item-content">
+                <p class="service-case-attribute"><span class="case-item-attribute-accent">工学部から</span>自動車メーカーに就職</p>
+                <h3 class="service-case-title">面接対策で技術内容を分かりやすく伝えるコツを習得しました。</h3>
+                <div class="service-case-button c-button">
+                  <span class="c-button-text service-case-button-text">View more</span>
+                  <span class="c-button-icon service-case-button-icon"></span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="service-case-item js-service-case-item">
+            <a href="#" class="service-case-item-link">
+              <div class="service-case-item-image">
+                <img src="img/service/case04.jpg" width="374" height="249" alt="IT金融業界に内定した卒業生のインタビューの様子" decoding="async" />
+              </div>
+              <div class="service-case-item-content">
+                <p class="service-case-attribute"><span class="case-item-attribute-accent">商学部から</span>IT金融業界に就職</p>
+                <h3 class="service-case-title">弱みを克服し強みを活かすことでIT業界転職成功できました。</h3>
+                <div class="service-case-button c-button">
+                  <span class="c-button-text service-case-button-text">View more</span>
+                  <span class="c-button-icon service-case-button-icon"></span>
+                </div>
+              </div>
+            </a>
+          </article>
+          <article class="service-case-item js-service-case-item">
+            <a href="#" class="service-case-item-link">
+              <div class="service-case-item-image">
+                <img src="img/service/case05.jpg" width="374" height="249" alt="人材業界に内定した卒業生のインタビューの様子" decoding="async" />
+              </div>
+              <div class="service-case-item-content">
+                <p class="service-case-attribute"><span class="case-item-attribute-accent">心理学部から</span>人材業界に就職</p>
+                <h3 class="service-case-title">相手に寄り添う力を武器に人材転職を実現しました。</h3>
+                <div class="service-case-button c-button">
+                  <span class="c-button-text service-case-button-text">View more</span>
+                  <span class="c-button-icon service-case-button-icon"></span>
+                </div>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer-logo">
+        <a href="index.html">
+          <img src="img/logo-white.svg" width="250" height="46" alt="Career Launch" decoding="async" />
+        </a>
+      </div>
+
+      <div class="l-footer-info">
+        <p class="l-footer-company">株式会社Career Launch</p>
+        <p class="l-footer-address">〒101-0045 <span class="u-block-sp">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
+        <p class="l-footer-contact">
+          <span class="l-footer-tel">TEL：03-1234-5678</span>
+          <span class="l-footer-fax">FAX：03-1234-5679</span>
+        </p>
+      </div>
+
+      <ul class="l-footer-list">
+        <li class="l-footer-item"><a href="about.html" class="l-footer-item-link">About</a></li>
+        <li class="l-footer-item"><a href="service.html" class="l-footer-item-link">Service</a></li>
+        <li class="l-footer-item"><a href="news.html" class="l-footer-item-link">News</a></li>
+        <li class="l-footer-item"><a href="recruit.html" class="l-footer-item-link">Recruit</a></li>
+        <li class="l-footer-item"><a href="contact.html" class="l-footer-item-link--contact">Contact</a></li>
+      </ul>
+
+      <div class="l-footer-legal">
+        <ul class="l-footer-list02">
+          <li class="l-footer-item02"><a href="#" class="l-footer-item02-link">Company</a></li>
+          <li class="l-footer-item02"><a href="#" class="l-footer-item02-link">Privacy Policy</a></li>
+        </ul>
+
+        <small class="l-footer-copyright">© 2025 株式会社Career Launch</small>
+      </div>
+    </footer>
+  </body>
 </html>

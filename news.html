@@ -21,10 +21,181 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- js -->
+    <script src="js/vendor/gsap.min.js" defer></script>
+    <script src="js/vendor/ScrollTrigger.min.js" defer></script>
     <script type="module" src="js/main.js"></script>
 
     <!-- noindex -->
     <meta name="robots" content="noindex" />
   </head>
-  <body></body>
+  <body>
+    <header class="l-header js-header">
+      <div class="l-header-logo">
+        <a href="index.html">
+          <img src="img/logo.svg" width="251" height="46" alt="Career Launch" decoding="sync" class="l-header-logo-image" />
+        </a>
+      </div>
+
+      <button class="l-header-menu-open js-header-menu-open"><span class="u-visually-hidden">メニューを開く</span></button>
+
+      <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
+        <div class="l-header-menu-inner js-header-menu-background">
+          <button class="l-header-menu-close u-sp-only js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
+          <nav class="l-header-nav" aria-label="グローバルナビゲーション">
+            <ul class="l-header-list l-header-list--page">
+              <li class="l-header-item u-sp-only">
+                <a href="index.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Top</span>
+                  <span class="l-header-item-jp">トップ</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="about.html" class="l-header-item-link">
+                  <span class="l-header-item-en">About</span>
+                  <span class="l-header-item-jp">私たちについて</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="service.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Service</span>
+                  <span class="l-header-item-jp">サービス</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="news.html" class="l-header-item-link l-header-item-link--current">
+                  <span class="l-header-item-en">News</span>
+                  <span class="l-header-item-jp">お知らせ</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="recruit.html" class="l-header-item-link">
+                  <span class="l-header-item-en">Recruit</span>
+                  <span class="l-header-item-jp">採用情報</span>
+                </a>
+              </li>
+              <li class="l-header-item">
+                <a href="contact.html" class="l-header-item-link l-header-item-link--contact">
+                  <span class="l-header-item-en">Contact</span>
+                  <span class="l-header-item-jp">お問い合わせ</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </dialog>
+    </header>
+
+    <main>
+      <div class="c-page-kv">
+        <div class="l-container">
+          <div class="c-page-title">
+            <span class="c-page-kv-en js-page-kv-en">News</span>
+            <h1 class="c-page-kv-title js-page-kv-title">お知らせ</h1>
+          </div>
+          <nav class="c-breadcrumb" aria-label="パンくずリスト">
+            <ol class="c-breadcrumb-list">
+              <li class="c-breadcrumb-item"><a href="../index.html" class="c-breadcrumb-item-link">Top</a></li>
+              <li class="c-breadcrumb-item c-breadcrumb-item--current">News</li>
+            </ol>
+          </nav>
+        </div>
+        <div class="c-page-kv-outer" aria-hidden="true"></div>
+      </div>
+
+      <div class="news-archive js-news-archive l-container-s">
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">8月の夏期集中コース申込受付開始</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">夜間模擬面接会（6月開催）参加者募集中</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">新オフィス（東京・神田）オープン</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">大学連携キャリアセミナーの実施決定</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">8月の夏期集中コース申込受付開始</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">夜間模擬面接会（6月開催）参加者募集中</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">新オフィス（東京・神田）オープン</h2>
+          </a>
+        </article>
+        <article class="c-news-post js-news-archive-post">
+          <a href="news.html" class="c-news-post-link c-news-post-link--archive">
+            <time class="c-news-post-date" datetime="2025-06-10">2025.06.10</time>
+            <h2 class="c-news-post-title">大学連携キャリアセミナーの実施決定</h2>
+          </a>
+        </article>
+
+        <nav class="c-pagination js-news-archive-pagination">
+          <a href="#" class="c-pagination-item c-pagination-item--prev"><span class="u-visually-hidden">前のページ</span></a>
+          <a href="#" class="c-pagination-item">1<span class="u-visually-hidden">ページ目</span></a>
+          <span class="c-pagination-item is-pagination-active"><span class="u-visually-hidden">現在のページ：</span>2<span class="u-visually-hidden">ページ目</span></span>
+          <a href="#" class="c-pagination-item">3<span class="u-visually-hidden">ページ目</span></a>
+          <span class="c-pagination-item c-pagination--dots"><span class="u-visually-hidden">間を省略</span></span>
+          <a href="#" class="c-pagination-item">10<span class="u-visually-hidden">ページ目</span></a>
+          <a href="#" class="c-pagination-item c-pagination-item--next"><span class="u-visually-hidden">次のページ</span></a>
+        </nav>
+      </div>
+    </main>
+
+    <footer class="l-footer">
+      <div class="l-footer-logo">
+        <a href="index.html">
+          <img src="img/logo-white.svg" width="250" height="46" alt="Career Launch" decoding="async" />
+        </a>
+      </div>
+
+      <div class="l-footer-info">
+        <p class="l-footer-company">株式会社Career Launch</p>
+        <p class="l-footer-address">〒101-0045 <span class="u-block-sp">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
+        <p class="l-footer-contact">
+          <span class="l-footer-tel">TEL：03-1234-5678</span>
+          <span class="l-footer-fax">FAX：03-1234-5679</span>
+        </p>
+      </div>
+
+      <ul class="l-footer-list">
+        <li class="l-footer-item"><a href="about.html" class="l-footer-item-link">About</a></li>
+        <li class="l-footer-item"><a href="service.html" class="l-footer-item-link">Service</a></li>
+        <li class="l-footer-item"><a href="news.html" class="l-footer-item-link">News</a></li>
+        <li class="l-footer-item"><a href="recruit.html" class="l-footer-item-link">Recruit</a></li>
+        <li class="l-footer-item"><a href="contact.html" class="l-footer-item-link--contact">Contact</a></li>
+      </ul>
+
+      <div class="l-footer-legal">
+        <ul class="l-footer-list02">
+          <li class="l-footer-item02"><a href="#" class="l-footer-item02-link">Company</a></li>
+          <li class="l-footer-item02"><a href="#" class="l-footer-item02-link">Privacy Policy</a></li>
+        </ul>
+
+        <small class="l-footer-copyright">© 2025 株式会社Career Launch</small>
+      </div>
+    </footer>
+  </body>
 </html>

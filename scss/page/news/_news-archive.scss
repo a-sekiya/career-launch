@@ -4,3 +4,11 @@
 page > news > news-archive
 ------------------------------
 */
+
+.news-archive {
+  margin-bottom: 64rem;
+
+  @include g.mq() {
+    margin-bottom: 96rem;
+  }
+}

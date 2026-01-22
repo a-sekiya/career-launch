@@ -69,12 +69,6 @@ page > service > service-case
   gap: 8rem;
 }
 
-.service-case-button {
-  display: flex;
-  gap: 10rem;
-  justify-content: flex-end;
-}
-
 .service-case-attribute {
   font-size: 14rem;
   letter-spacing: 0.075em;
@@ -86,6 +80,12 @@ page > service > service-case
 
 .service-case-title {
   line-height: 1.6;
+}
+
+.service-case-button {
+  display: flex;
+  gap: 10rem;
+  justify-content: flex-end;
 }
 
 .service-case-button-text {

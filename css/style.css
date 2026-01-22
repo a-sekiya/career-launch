@@ -1985,8 +1985,8 @@ page > service > service-detail
 }
 
 .service-detail-item {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: var(--color-bg-light);
   border-radius: 10rem;
   padding: 0 0 40rem 0;
@@ -1996,15 +1996,18 @@ page > service > service-detail
 @media screen and (min-width: 900px) {
   .service-detail-item {
     background-color: transparent;
-    flex-direction: row;
+    grid-template-columns: repeat(2, 1fr);
     padding: 0;
     margin-top: 0;
   }
-  .service-detail-item:nth-child(even) {
-    flex-direction: row-reverse;
+  .service-detail-item:nth-child(odd) .service-detail-item-content {
+    order: 1;
   }
-  .service-detail-item:nth-child(even) .service-detail-item-img img {
-    border-radius: 14rem 0 0 14rem;
+  .service-detail-item:nth-child(odd) .service-detail-item-img {
+    order: 2;
+  }
+  .service-detail-item:nth-child(odd) .service-detail-item-img img {
+    border-radius: 0 14rem 14rem 0;
   }
 }
 
@@ -2019,7 +2022,6 @@ page > service > service-detail
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 0 0 600rem;
   }
 }
 
@@ -2122,7 +2124,6 @@ page > service > service-detail
   .service-detail-item-img {
     margin-top: 0;
     padding: 0;
-    flex: 0 0 600rem;
   }
 }
 .service-detail-item-img img {
@@ -2131,7 +2132,10 @@ page > service > service-detail
 }
 @media screen and (min-width: 900px) {
   .service-detail-item-img img {
-    border-radius: 0 14rem 14rem 0;
+    border-radius: 14rem 0 0 14rem;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

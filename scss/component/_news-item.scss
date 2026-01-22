@@ -6,6 +6,12 @@ component > news-item
 */
 .c-news-post {
   border-bottom: 1rem solid var(--color-border);
+
+  &:first-child {
+    .c-news-post-link--archive {
+      padding-top: 0;
+    }
+  }
 }
 
 .c-news-post-link {

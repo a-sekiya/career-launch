@@ -4,3 +4,83 @@
 page > contact > contact-form
 ------------------------------
 */
+
+.contact-wrapper {
+  margin-bottom: 64rem;
+
+  @include g.mq() {
+    margin-bottom: 96rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+
+  @include g.mq() {
+    gap: 32rem;
+  }
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+
+  @include g.mq() {
+    grid-template-columns: 246rem 1fr;
+    gap: 20rem;
+  }
+}
+
+.contact-item--contact {
+  @include g.mq() {
+    align-items: start;
+  }
+}
+
+.contact-label {
+  font-size: 16rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include g.mq() {
+    font-size: 18rem;
+    justify-content: flex-start;
+    gap: 8rem;
+  }
+}
+
+.contact-label--contact {
+  @include g.mq() {
+    translate: 0 12rem;
+    align-items: flex-end;
+  }
+}
+
+.contact-submit-area {
+  display: grid;
+  place-items: center;
+  gap: 16rem;
+}
+
+.contact-text {
+  font-size: 14rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-text-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1rem;
+  text-underline-offset: 4rem;
+  transition: 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

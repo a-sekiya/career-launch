@@ -391,6 +391,26 @@ component > button
   }
 }
 
+.c-button-submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding: 14rem 40rem;
+  border-radius: 100vh;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+@media (any-hover: hover) {
+  .c-button-submit:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2rem);
+    box-shadow: var(--color-button-shadow-hover);
+    color: var(--color-white);
+  }
+}
+
 /*!
 component > entry-button
 ------------------------------
@@ -804,6 +824,42 @@ component > title
 component > form
 ------------------------------
 */
+.c-form-required {
+  display: inline-block;
+  font-size: 13rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  padding: 2rem 8rem;
+  border-radius: 7rem;
+}
+
+.c-form-text {
+  background-color: var(--color-bg-extra-light);
+  padding: 12rem 8rem;
+  outline: none;
+  width: 100%;
+  border-radius: 8rem;
+  letter-spacing: 0.05em;
+}
+
+.c-form-text::-moz-placeholder {
+  color: var(--color-font-light);
+}
+
+.c-form-text::placeholder {
+  color: var(--color-font-light);
+}
+
+.c-form-text:focus:focus {
+  box-shadow: 0 0 0 1px var(--color-primary) inset;
+}
+
+.c-form-text--textarea {
+  min-height: 200rem;
+  field-sizing: content;
+}
+
 /*!
 layout > container
 ------------------------------
@@ -2475,4 +2531,86 @@ page > recruit > recruit-entry
 page > contact > contact-form
 ------------------------------
 */
+.contact-wrapper {
+  margin-bottom: 64rem;
+}
+@media screen and (min-width: 900px) {
+  .contact-wrapper {
+    margin-bottom: 96rem;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24rem;
+}
+@media screen and (min-width: 900px) {
+  .contact-form {
+    gap: 32rem;
+  }
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6rem;
+}
+@media screen and (min-width: 900px) {
+  .contact-item {
+    grid-template-columns: 246rem 1fr;
+    gap: 20rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-item--contact {
+    align-items: start;
+  }
+}
+
+.contact-label {
+  font-size: 16rem;
+  letter-spacing: 0.05em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 900px) {
+  .contact-label {
+    font-size: 18rem;
+    justify-content: flex-start;
+    gap: 8rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contact-label--contact {
+    translate: 0 12rem;
+    align-items: flex-end;
+  }
+}
+
+.contact-submit-area {
+  display: grid;
+  place-items: center;
+  gap: 16rem;
+}
+
+.contact-text {
+  font-size: 14rem;
+  letter-spacing: 0.05em;
+}
+
+.contact-text-link {
+  text-decoration: underline;
+  text-decoration-thickness: 1rem;
+  text-underline-offset: 4rem;
+  transition: 0.3s ease;
+}
+@media (any-hover: hover) {
+  .contact-text-link:hover {
+    color: var(--color-primary);
+  }
+}
 /*# sourceMappingURL=style.css.map */

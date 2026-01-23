@@ -75,3 +75,25 @@ component > button
     }
   }
 }
+
+// 送信用
+.c-button-submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 18rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  padding: 14rem 40rem;
+  border-radius: 100vh;
+  display: inline-block;
+  transition: all 0.3s ease;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--color-primary-hover);
+      transform: translateY(-2rem);
+      box-shadow: var(--color-button-shadow-hover);
+      color: var(--color-white);
+    }
+  }
+}

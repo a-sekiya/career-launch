@@ -395,6 +395,28 @@ component > button
 component > entry-button
 ------------------------------
 */
+.c-entry {
+  position: relative;
+  width: 290rem;
+  height: 294.3rem;
+}
+@media screen and (min-width: 900px) {
+  .c-entry {
+    width: 355rem;
+    height: 360rem;
+  }
+}
+
+.c-entry-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 /*!
 component > title
 ------------------------------
@@ -730,6 +752,52 @@ component > breadcrumb
 }
 .c-breadcrumb-item--current::after {
   display: none;
+}
+
+/*!
+component > title
+------------------------------
+*/
+.c-table-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 0;
+  border-bottom: 1rem solid var(--color-border);
+  padding: 16rem 8rem;
+}
+@media screen and (min-width: 900px) {
+  .c-table-row {
+    grid-template-columns: 110rem 1fr;
+    align-items: center;
+    padding: 24rem 8rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .c-table-row--recruit {
+    grid-template-columns: 134rem 1fr;
+  }
+}
+
+.c-table-header {
+  color: var(--color-font-light);
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.125em;
+}
+@media screen and (min-width: 900px) {
+  .c-table-header {
+    font-size: 16rem;
+  }
+}
+
+.c-table-tel {
+  transition: 0.3s;
+}
+@media (any-hover: hover) {
+  .c-table-tel:hover {
+    color: var(--color-primary);
+  }
 }
 
 /*!
@@ -1625,45 +1693,16 @@ page > top > top-recruit
 }
 
 .top-recruit-entry {
-  position: relative;
-  width: 290rem;
-  height: 294.3rem;
   order: 2;
   margin-inline: auto;
 }
 @media screen and (min-width: 900px) {
   .top-recruit-entry {
-    width: 355rem;
-    height: 360rem;
     margin-left: auto;
     margin-right: 0;
     margin-top: 80rem;
     padding-inline: 0;
   }
-}
-
-.top-recruit-entry-circle {
-  width: 100%;
-  height: 100%;
-}
-
-.top-recruit-entry-circle-text {
-  width: 100%;
-  height: 100%;
-  fill: var(--color-primary);
-  font-family: var(--font-family-en);
-  font-size: 8px;
-  letter-spacing: 1em;
-}
-
-.top-recruit-button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
 }
 
 @media screen and (min-width: 900px) {
@@ -2019,42 +2058,6 @@ page > about > about-company
   }
 }
 
-.about-company-table-row {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem 0;
-  border-bottom: 1rem solid var(--color-border);
-  padding: 16rem 8rem;
-}
-@media screen and (min-width: 900px) {
-  .about-company-table-row {
-    grid-template-columns: 110rem 1fr;
-    align-items: center;
-    padding: 24rem 8rem;
-  }
-}
-
-.about-company-table-header {
-  color: var(--color-font-light);
-  font-size: 14rem;
-  line-height: 1.7;
-  letter-spacing: 0.125em;
-}
-@media screen and (min-width: 900px) {
-  .about-company-table-header {
-    font-size: 16rem;
-  }
-}
-
-.about-company-table-tel {
-  transition: 0.3s;
-}
-@media (any-hover: hover) {
-  .about-company-table-tel:hover {
-    color: var(--color-primary);
-  }
-}
-
 /*!
 page > service > service-detail
 ------------------------------
@@ -2340,18 +2343,134 @@ page > news > news-archive
 page > recruit > recruit-position
 ------------------------------
 */
+.recruit-position-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  margin-top: 40rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-position-list {
+    flex-direction: row;
+    gap: 60rem;
+    margin-top: 56rem;
+  }
+}
+
+.recruit-position-item {
+  flex: 1;
+  padding: 31rem 19rem;
+  border: 1px solid var(--color-border);
+  border-radius: 11rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-position-item {
+    padding: 39rem;
+  }
+}
+
+.recruit-position-title-jp {
+  font-size: 20rem;
+  letter-spacing: 0.05em;
+}
+@media screen and (min-width: 900px) {
+  .recruit-position-title-jp {
+    font-size: 28rem;
+  }
+}
+
+.recruit-position-title-en {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 4rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-position-title-en {
+    font-size: 16rem;
+  }
+}
+
+.recruit-position-text {
+  margin-top: 14rem;
+}
+
 /*!
 page > recruit > recruit-benefit
 ------------------------------
 */
+.recruit-benefit {
+  background-color: var(--color-bg-extra-light);
+  padding-block: 64rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-benefit {
+    padding-block: 96rem;
+  }
+}
+
+.recruit-benefit-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 24rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-benefit-table {
+    margin-top: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 32rem;
+  }
+}
+
 /*!
 page > recruit > recruit-culture
 ------------------------------
 */
+.recruit-culture-splide {
+  margin-top: 40rem;
+  padding-left: 10rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-culture-splide {
+    padding-left: 0;
+  }
+}
+
+.recruit-culture-item-image {
+  width: 223rem;
+  height: 149rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 10rem;
+}
+@media screen and (min-width: 900px) {
+  .recruit-culture-item-image {
+    width: 350rem;
+    height: 234rem;
+    border-radius: 12rem;
+  }
+}
+
 /*!
 page > recruit > recruit-entry
 ------------------------------
 */
+.recruit-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 900px) {
+  .recruit-entry {
+    margin-bottom: 96rem;
+  }
+}
+
 /*!
 page > contact > contact-form
 ------------------------------

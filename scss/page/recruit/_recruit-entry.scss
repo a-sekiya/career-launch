@@ -4,3 +4,14 @@
 page > recruit > recruit-entry
 ------------------------------
 */
+.recruit-entry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 64rem;
+  overflow: hidden;
+
+  @include g.mq() {
+    margin-bottom: 96rem;
+  }
+}

@@ -4,3 +4,52 @@
 page > recruit > recruit-position
 ------------------------------
 */
+
+.recruit-position-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16rem;
+  margin-top: 40rem;
+
+  @include g.mq() {
+    flex-direction: row;
+    gap: 60rem;
+    margin-top: 56rem;
+  }
+}
+
+.recruit-position-item {
+  flex: 1;
+  padding: 31rem 19rem;
+  border: 1px solid var(--color-border);
+  border-radius: 11rem;
+
+  @include g.mq() {
+    padding: 39rem;
+  }
+}
+
+.recruit-position-title-jp {
+  font-size: 20rem;
+  letter-spacing: 0.05em;
+
+  @include g.mq() {
+    font-size: 28rem;
+  }
+}
+
+.recruit-position-title-en {
+  color: var(--color-primary);
+  font-family: var(--font-family-en);
+  font-size: 15rem;
+  letter-spacing: 0.05em;
+  margin-top: 4rem;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.recruit-position-text {
+  margin-top: 14rem;
+}

@@ -4,3 +4,25 @@
 page > recruit > recruit-culture
 ------------------------------
 */
+.recruit-culture-splide {
+  margin-top: 40rem;
+  padding-left: 10rem;
+
+  @include g.mq() {
+    padding-left: 0;
+  }
+}
+
+.recruit-culture-item-image {
+  width: 223rem;
+  height: 149rem;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 10rem;
+
+  @include g.mq() {
+    width: 350rem;
+    height: 234rem;
+    border-radius: 12rem;
+  }
+}

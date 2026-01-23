@@ -4,3 +4,25 @@
 page > recruit > recruit-benefit
 ------------------------------
 */
+
+.recruit-benefit {
+  background-color: var(--color-bg-extra-light);
+  padding-block: 64rem;
+
+  @include g.mq() {
+    padding-block: 96rem;
+  }
+}
+
+.recruit-benefit-table {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 24rem;
+
+  @include g.mq() {
+    margin-top: 40rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 32rem;
+  }
+}

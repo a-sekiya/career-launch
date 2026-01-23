@@ -4,3 +4,23 @@
 component > entry-button
 ------------------------------
 */
+.c-entry {
+  position: relative;
+  width: 290rem;
+  height: 294.3rem;
+
+  @include g.mq() {
+    width: 355rem;
+    height: 360rem;
+  }
+}
+
+.c-entry-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}

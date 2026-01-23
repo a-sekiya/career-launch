@@ -5,8 +5,9 @@
 export const initializeTopRecruit = () => {
   const image = document.querySelector(".js-top-recruit-image img");
   const info = document.querySelector(".js-top-recruit-info");
+  const visual = document.querySelector(".js-top-recruit-visual");
 
-  if (!image || !info) return;
+  if (!image || !info || !visual) return;
 
   // --- 1. 背景のパララックス ---
   gsap.fromTo(
@@ -16,7 +17,7 @@ export const initializeTopRecruit = () => {
       yPercent: 10,
       ease: "none",
       scrollTrigger: {
-        trigger: ".top-recruit-visual",
+        trigger: visual,
         start: "top bottom",
         end: "bottom top",
         scrub: 1,

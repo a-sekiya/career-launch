@@ -15,7 +15,7 @@ export const initializeContactForm = () => {
     ease: "power2.out",
     stagger: 0.2,
     scrollTrigger: {
-      trigger: ".contact-form",
+      trigger: form,
       start: "top 80%",
       once: true,
     },
@@ -29,7 +29,7 @@ export const initializeContactForm = () => {
       delay: 0.8,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: ".contact-form",
+        trigger: form,
         start: "top 80%",
         once: true,
       },

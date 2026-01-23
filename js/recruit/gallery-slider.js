@@ -4,6 +4,7 @@
 
 export const initializeCultureGallery = () => {
   const el = document.querySelector(".js-recruit-culture-splide");
+
   if (!el) return;
 
   const splide = new Splide(el, {
@@ -28,6 +29,5 @@ export const initializeCultureGallery = () => {
     },
   });
 
-  // 拡張機能を正しくマウント
   splide.mount(window.splide.Extensions);
 };

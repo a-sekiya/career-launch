@@ -11,7 +11,7 @@ export const initializeNewsArchive = () => {
   const tl = gsap.timeline({
     scrollTrigger: {
       trigger: archive,
-      start: "top 70%",
+      start: "top 80%",
     },
 
     delay: 0.5,

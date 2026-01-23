@@ -4,3 +4,38 @@
 component > form
 ------------------------------
 */
+.c-form-required {
+  display: inline-block;
+  font-size: 13rem;
+  letter-spacing: 0.05em;
+  color: var(--color-white);
+  background-color: var(--color-red);
+  padding: 2rem 8rem;
+  border-radius: 7rem;
+}
+
+.c-form-text {
+  background-color: var(--color-bg-extra-light);
+  padding: 12rem 8rem;
+  outline: none;
+  width: 100%;
+  border-radius: 8rem;
+  letter-spacing: 0.05em;
+}
+
+.c-form-text {
+  &::placeholder {
+    color: var(--color-font-light);
+  }
+}
+
+.c-form-text:focus {
+  &:focus {
+    box-shadow: 0 0 0 1px var(--color-primary) inset;
+  }
+}
+
+.c-form-text--textarea {
+  min-height: 200rem;
+  field-sizing: content;
+}

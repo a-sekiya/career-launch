@@ -4,8 +4,8 @@
 export const initializeServiceCase = () => {
   gsap.registerPlugin(ScrollTrigger);
 
-  const list = document.querySelector(".js-service-case-list"); // 親
-  const items = document.querySelectorAll(".js-service-case-item"); // 子
+  const list = document.querySelector(".js-service-case-list");
+  const items = document.querySelectorAll(".js-service-case-item");
 
   if (!list || items.length === 0) return;
 

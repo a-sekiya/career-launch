@@ -6,7 +6,7 @@ export const initializeNewsArchive = () => {
   const posts = document.querySelectorAll(".js-news-archive-post");
   const pagination = document.querySelector(".js-news-archive-pagination");
 
-  if (!archive || posts.length === 0) return;
+  if (!archive || posts.length === 0 || !pagination) return;
 
   const tl = gsap.timeline({
     scrollTrigger: {

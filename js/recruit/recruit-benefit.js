@@ -2,22 +2,22 @@
  * Recruitページ：Benefitセクションのアニメーション
  */
 export const initializeRecruitBenefit = () => {
-  const rows = document.querySelectorAll(".js-recruit-benefit-table-row");
-  const table = document.querySelectorAll(".js-recruit-benefit-table");
+  const item = document.querySelectorAll(".js-recruit-benefit-item");
+  const list = document.querySelectorAll(".js-recruit-benefit-list");
 
-  if (rows.length === 0 || !table) return;
+  if (item.length === 0 || !list) return;
 
   const mm = gsap.matchMedia();
 
   mm.add("(min-width: 900px)", () => {
-    gsap.from(rows, {
+    gsap.from(item, {
       y: 20,
       autoAlpha: 0,
       duration: 0.8,
       stagger: 0.1,
       ease: "power2.out",
       scrollTrigger: {
-        trigger: table,
+        trigger: list,
         start: "top 80%",
         once: true,
       },
@@ -25,7 +25,7 @@ export const initializeRecruitBenefit = () => {
   });
 
   mm.add("(max-width: 899px)", () => {
-    rows.forEach((row) => {
+    item.forEach((row) => {
       gsap.from(row, {
         y: 15,
         autoAlpha: 0,

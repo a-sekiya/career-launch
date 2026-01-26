@@ -28,6 +28,7 @@
     <!-- noindex -->
     <meta name="robots" content="noindex" />
   </head>
+
   <body>
     <header class="l-header js-header">
       <h1 class="l-header-logo">
@@ -40,10 +41,10 @@
 
       <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
         <div class="l-header-menu-inner js-header-menu-background">
-          <button class="l-header-menu-close u-sp-only js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
+          <button class="l-header-menu-close js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
           <nav class="l-header-nav" aria-label="グローバルナビゲーション">
             <ul class="l-header-list">
-              <li class="l-header-item u-sp-only">
+              <li class="l-header-item l-header-item--top">
                 <a href="index.html" class="l-header-item-link">
                   <span class="l-header-item-en">Top</span>
                   <span class="l-header-item-jp">トップ</span>
@@ -90,15 +91,15 @@
         <div class="top-kv-text-wrap">
           <div class="l-container">
             <div class="top-kv-text-inner">
-              <p class="top-kv-text js-top-kv-text">Shape your future,<span class="u-block">your way.</span></p>
+              <p class="top-kv-text js-top-kv-text">Shape your future,<span class="top-kv-text-unit">your way.</span></p>
               <p class="top-kv-text02 js-top-kv-text02">自分らしさが、キャリアになる。</p>
             </div>
           </div>
         </div>
-        <div class="top-kv-scroll-wrapper u-pc-only">
+        <div class="top-kv-scroll-wrapper">
           <div class="top-kv-scroll-curve" aria-hidden="true"></div>
 
-          <button type="button" class="top-kv-scroll js-top-kv-scroll u-pc-only">
+          <button type="button" class="top-kv-scroll js-top-kv-scroll">
             <span class="top-kv-scroll-line"></span>
             <span class="top-kv-scroll-text">Scroll</span>
           </button>
@@ -112,7 +113,7 @@
               <h2 class="c-title-en c-title-en--small">About</h2>
             </div>
 
-            <p class="top-about-text">あなたの「らしさ」が、<span class="u-block">未来をつくる。</span></p>
+            <p class="top-about-text">あなたの「らしさ」が、<span class="top-about-text-unit">未来をつくる。</span></p>
             <p class="top-about-text02" aria-hidden="true">Your uniqueness shapes your future.</p>
 
             <p class="top-about-text03">私たち就活スクールは、学生一人ひとりが自分らしく社会に踏み出せるよう、キャリア形成を全力で支援します。<br />時代が変わっても、自分を理解し、自分の言葉で語れる力は社会で通用します。<br />あなたの“納得のいく一歩”を、私たちと一緒に見つけませんか？</p>
@@ -128,7 +129,7 @@
           <div class="top-about-image js-top-about-image">
             <picture>
               <source media="(max-width: 899px)" srcset="img/top/top-about-sp.jpg" />
-              <img width="624" height="670" src="img/top/top-about.jpg" alt="リクルートスーツを着て前向きに歩く就活生の男性" decoding="async" />
+              <img src="img/top/top-about.jpg" width="624" height="670" alt="リクルートスーツを着て前向きに歩く就活生の男性" decoding="async" />
             </picture>
           </div>
         </div>
@@ -138,8 +139,8 @@
         <div class="top-service-inner l-container">
           <div class="top-service-header js-top-service-header">
             <div class="c-title">
-              <h2 class="c-title-en c-title-en--white">Service</h2>
-              <span class="c-title-jp c-title-jp--white">サービス</span>
+              <span class="c-title-en c-title-en--white">Service</span>
+              <h2 class="c-title-jp c-title-jp--white">サービス</h2>
             </div>
             <p class="top-service-text">就活の「不安」を「自信」に変える2つのプログラム。<br />自己理解から実践対策まで、一人ひとりに合わせて丁寧にサポートします。</p>
           </div>
@@ -194,14 +195,16 @@
         </div>
 
         <div class="top-recruit-content l-container">
-          <div class="top-recruit-entry c-entry">
-            <div class="c-entry-circle js-entry-circle">
-              <img src="img/recruit-button-text.svg" alt="Join us, Career Launch !" class="c-entry-circle-img" />
-            </div>
+          <div class="top-recruit-entry c-entry js-entry">
+            <a href="contact.html" class="c-entry-link">
+              <div class="c-entry-circle js-entry-circle">
+                <img src="img/recruit-button-text.svg" width="355" height="360" alt="Join us, Career Launch !" decoding="async" class="c-entry-circle-img" />
+              </div>
 
-            <a href="contact.html" class="c-button c-entry-button js-entry-button">
-              <span class="c-button-text">Entry Form</span>
-              <span class="c-button-icon"></span>
+              <div class="c-button c-entry-button">
+                <span class="c-button-text">Entry Form</span>
+                <span class="c-button-icon"></span>
+              </div>
             </a>
           </div>
 
@@ -210,8 +213,8 @@
               <h2 class="c-title-en c-title-en--small">Recruit</h2>
             </div>
 
-            <p class="top-recruit-text">誰かの未来を、<span class="u-block-sp">支える仕事。</span></p>
-            <p class="top-recruit-text02">就職活動は、人生の転機。<br /><span class="u-block-pc">その一歩を支える私たちの仕事には、誇りがあります。</span>受講生一人ひとりと真剣に向き合い、可能性を引き出す、<span class="u-block-pc">そんな役割に、あなたも参加しませんか？</span></p>
+            <p class="top-recruit-text">誰かの未来を、<span class="top-recruit-text-unit">支える仕事。</span></p>
+            <p class="top-recruit-text02">就職活動は、人生の転機。<br /><span class="top-recruit-text02-unit">その一歩を支える私たちの仕事には、誇りがあります。</span>受講生一人ひとりと真剣に向き合い、可能性を引き出す、<span class="top-recruit-text02-unit">そんな役割に、あなたも参加しませんか？</span></p>
             <p class="top-recruit-text03" aria-hidden="true">Join us in guiding students to their next chapter.<br />Your support could change someone’s future.</p>
           </div>
         </div>
@@ -221,8 +224,8 @@
         <div class="l-container">
           <div class="top-news-inner js-top-news-inner">
             <div class="c-title js-top-news-title">
-              <h2 class="c-title-en">News</h2>
-              <span class="c-title-jp">お知らせ</span>
+              <span class="c-title-en">News</span>
+              <h2 class="c-title-jp">お知らせ</h2>
             </div>
             <a href="news.html" class="c-button top-news-button js-top-news-button">
               <span class="c-button-text">View more</span>
@@ -268,7 +271,7 @@
 
       <div class="l-footer-info">
         <p class="l-footer-company">株式会社Career Launch</p>
-        <p class="l-footer-address">〒101-0045 <span class="u-block-sp">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
+        <p class="l-footer-address">〒101-0045 <span class="l-footer-text-unit">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
         <p class="l-footer-contact">
           <span class="l-footer-tel">TEL：03-1234-5678</span>
           <span class="l-footer-fax">FAX：03-1234-5679</span>

@@ -45,6 +45,27 @@ page > service > service-detail
   }
 }
 
+.service-detail-item-img {
+  margin-top: -20rem;
+  padding: 0 24rem 24rem;
+
+  @include g.mq() {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  & img {
+    overflow: hidden;
+    border-radius: 10rem;
+
+    @include g.mq() {
+      border-radius: 14rem 0 0 14rem;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 .service-detail-item-content {
   background-color: var(--color-bg-light);
   padding: 0 24rem;
@@ -99,6 +120,18 @@ page > service > service-detail
   }
 }
 
+.service-detail-item-text-unit-pc {
+  display: inline;
+
+  @include g.mq() {
+    display: block;
+  }
+}
+
+.service-detail-item-text-unit {
+  display: block;
+}
+
 .service-detail-item-list {
   margin-top: 24rem;
   display: flex;
@@ -140,23 +173,10 @@ page > service > service-detail
   }
 }
 
-.service-detail-item-img {
-  margin-top: -20rem;
-  padding: 0 24rem 24rem;
+.service-detail-item-label-unit {
+  display: block !important;
 
   @include g.mq() {
-    margin-top: 0;
-    padding: 0;
-  }
-
-  & img {
-    overflow: hidden;
-    border-radius: 10rem;
-
-    @include g.mq() {
-      border-radius: 14rem 0 0 14rem;
-      height: 100%;
-      object-fit: cover;
-    }
+    display: inline !important;
   }
 }

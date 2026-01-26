@@ -43,6 +43,14 @@ layout > footer
   }
 }
 
+.l-footer-text-unit {
+  display: block;
+
+  @include g.mq() {
+    display: inline;
+  }
+}
+
 .l-footer-contact {
   display: flex;
   justify-content: center;

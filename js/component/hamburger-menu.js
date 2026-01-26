@@ -10,29 +10,31 @@ export const initializeHamburgerMenu = () => {
 
   if (!openButton || !menu || !closeButton) return;
 
-  const openingKeyframes = { opacity: [0, 1] };
-  const closingKeyframes = { opacity: [1, 0] };
-  const options = { duration: 300, easing: "ease-out" };
+  const options = { duration: 350, easing: "ease-out" };
 
   let isAnimating = false;
 
+  // 開くとき
   const openMenu = () => {
     if (isAnimating) return;
     isAnimating = true;
-    initializeHeaderBackgroundToggle(true);
     menu.showModal();
-    const openingAnim = menu.animate(openingKeyframes, options);
+    requestAnimationFrame(() => {
+      menu.classList.add("is-active");
+    });
+
+    const openingAnim = menu.animate({ opacity: [0, 1] }, options);
     openingAnim.onfinish = () => (isAnimating = false);
   };
 
+  // 閉じるとき
   const closeMenu = () => {
     if (isAnimating || !menu.open) return;
     isAnimating = true;
-
-    const closingAnim = menu.animate(closingKeyframes, options);
+    menu.classList.remove("is-active");
+    const closingAnim = menu.animate({ opacity: [1, 0] }, options);
     closingAnim.onfinish = () => {
       menu.close();
-      initializeHeaderBackgroundToggle(false);
       isAnimating = false;
     };
   };

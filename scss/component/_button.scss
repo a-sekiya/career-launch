@@ -21,10 +21,7 @@ component > button
 
       .c-button-icon {
         background-color: var(--color-primary-hover);
-
-        &::after {
-          transform: translate(20%, -50%);
-        }
+        transform: scale(1.1);
       }
     }
   }
@@ -50,7 +47,7 @@ component > button
   background-color: var(--color-primary);
   border-radius: 50%;
   position: relative;
-  transition: background-color 0.3s ease, filter 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 
   @include g.mq() {
     width: 58rem;
@@ -67,7 +64,6 @@ component > button
     height: 5rem;
     border-radius: 50%;
     background-color: var(--color-white);
-    transition: transform 0.3s ease;
 
     @include g.mq() {
       width: 6rem;

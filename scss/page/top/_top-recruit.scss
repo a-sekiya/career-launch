@@ -6,6 +6,10 @@ page > top > top-recruit
 */
 .top-recruit {
   overflow: hidden;
+
+  @include g.mq() {
+    overflow: visible;
+  }
 }
 
 .top-recruit-visual {
@@ -80,12 +84,28 @@ page > top > top-recruit
   }
 }
 
+.top-recruit-text-unit {
+  display: block;
+
+  @include g.mq() {
+    display: inline;
+  }
+}
+
 .top-recruit-text02 {
   line-height: 2.2;
   margin-top: 24rem;
 
   @include g.mq() {
     margin-top: 32rem;
+  }
+}
+
+.top-recruit-text02-unit {
+  display: inline;
+
+  @include g.mq() {
+    display: block;
   }
 }
 

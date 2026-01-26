@@ -7,7 +7,8 @@ layout > header
 .l-header {
   display: flex;
   justify-content: space-between;
-  padding: 23rem 12rem;
+  align-items: center;
+  padding: 20rem 12rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -33,6 +34,11 @@ layout > header
 .l-header-menu {
   &::backdrop {
     background-color: var(--color-black);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &.is-active::backdrop {
     opacity: 0.3;
   }
 }
@@ -150,6 +156,12 @@ layout > header
 .l-header-list--page {
   @include g.mq() {
     color: var(--color-font-base);
+  }
+}
+
+.l-header-item--top {
+  @include g.mq() {
+    display: none;
   }
 }
 

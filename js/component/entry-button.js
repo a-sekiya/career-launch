@@ -3,9 +3,9 @@
  */
 export const initializeEntryButton = () => {
   const circle = document.querySelector(".js-entry-circle");
-  const button = document.querySelector(".js-entry-button");
+  const entry = document.querySelector(".js-entry");
 
-  if (!circle || !button) return;
+  if (!circle || !entry) return;
 
   // 1. 無限回転の設定
   const rotation = gsap.to(circle, {
@@ -16,13 +16,13 @@ export const initializeEntryButton = () => {
   });
 
   // 2. ホバーイベント（タイムスケールを操る）
-  button.addEventListener("mouseenter", () => {
+  entry.addEventListener("mouseenter", () => {
     gsap.to(rotation, { timeScale: 4, duration: 1, ease: "power2.out" });
-    gsap.to(button, { scale: 1.1, duration: 0.3, ease: "back.out(1.7)" });
+    gsap.to(entry, { scale: 1.1, duration: 0.3, ease: "back.out(1.7)" });
   });
 
-  button.addEventListener("mouseleave", () => {
+  entry.addEventListener("mouseleave", () => {
     gsap.to(rotation, { timeScale: 1, duration: 1, ease: "power2.inOut" });
-    gsap.to(button, { scale: 1, duration: 0.3 });
+    gsap.to(entry, { scale: 1, duration: 0.3 });
   });
 };

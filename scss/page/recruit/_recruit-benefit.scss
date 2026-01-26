@@ -14,7 +14,7 @@ page > recruit > recruit-benefit
   }
 }
 
-.recruit-benefit-table {
+.recruit-benefit-list {
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 24rem;
@@ -24,5 +24,40 @@ page > recruit > recruit-benefit
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0 32rem;
+  }
+}
+
+.recruit-benefit-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem 0;
+  border-bottom: 1rem solid var(--color-border);
+  padding: 16rem 8rem;
+
+  @include g.mq() {
+    grid-template-columns: 134rem 1fr;
+    align-items: center;
+    padding: 24rem 8rem;
+  }
+}
+
+.recruit-benefit-item-title {
+  color: var(--color-font-light);
+  font-size: 14rem;
+  line-height: 1.7;
+  letter-spacing: 0.125em;
+
+  @include g.mq() {
+    font-size: 16rem;
+  }
+}
+
+.recruit-benefit-item-tel {
+  transition: 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-primary);
+    }
   }
 }

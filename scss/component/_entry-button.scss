@@ -7,11 +7,25 @@ component > entry-button
 .c-entry {
   position: relative;
   width: 290rem;
-  height: 294.3rem;
+  height: 296rem;
 
   @include g.mq() {
     width: 355rem;
     height: 360rem;
+  }
+}
+
+.c-entry-link {
+  @media (any-hover: hover) {
+    &:hover {
+      .c-button-text {
+        color: var(--color-primary-hover);
+      }
+
+      .c-button-icon {
+        background-color: var(--color-primary-hover);
+      }
+    }
   }
 }
 

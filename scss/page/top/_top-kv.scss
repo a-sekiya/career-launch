@@ -41,6 +41,10 @@ page > top > top-kv
   }
 }
 
+.top-kv-text-unit {
+  display: block;
+}
+
 .top-kv-text02 {
   font-size: 18rem;
   line-height: 1.5;
@@ -55,6 +59,8 @@ page > top > top-kv
 }
 
 .top-kv-scroll-wrapper {
+  display: none;
+
   @include g.mq() {
     position: absolute;
     right: 0;
@@ -65,6 +71,8 @@ page > top > top-kv
 }
 
 .top-kv-scroll {
+  display: none;
+
   @include g.mq() {
     background-color: var(--color-white);
     border-radius: 39rem 0 0 0;
@@ -72,6 +80,8 @@ page > top > top-kv
     display: flex;
     align-items: flex-start;
     gap: 6rem;
+    outline: 1px solid var(--color-white);
+    outline-offset: -0.5px;
 
     @media (any-hover: hover) {
       &:hover {
@@ -84,7 +94,10 @@ page > top > top-kv
 }
 
 .top-kv-scroll-text {
+  display: none;
+
   @include g.mq() {
+    display: block;
     writing-mode: vertical-rl;
     font-family: var(--font-family-en);
     font-size: 15rem;

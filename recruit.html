@@ -43,10 +43,10 @@
 
       <dialog class="l-header-menu js-header-menu" aria-label="メニュー">
         <div class="l-header-menu-inner js-header-menu-background">
-          <button class="l-header-menu-close u-sp-only js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
+          <button class="l-header-menu-close js-header-menu-close"><span class="u-visually-hidden">メニューを閉じる</span></button>
           <nav class="l-header-nav" aria-label="グローバルナビゲーション">
             <ul class="l-header-list l-header-list--page">
-              <li class="l-header-item u-sp-only">
+              <li class="l-header-item l-header-item--top">
                 <a href="index.html" class="l-header-item-link">
                   <span class="l-header-item-en">Top</span>
                   <span class="l-header-item-jp">トップ</span>
@@ -107,8 +107,8 @@
 
       <section class="recruit-position l-container">
         <div class="c-title">
-          <h2 class="c-title-en">Open Position</h2>
-          <span class="c-title-jp">募集職種</span>
+          <span class="c-title-en">Open Position</span>
+          <h2 class="c-title-jp">募集職種</h2>
         </div>
         <ul class="recruit-position-list">
           <li class="recruit-position-item js-recruit-position-item">
@@ -127,37 +127,37 @@
       <section class="recruit-benefit u-mt">
         <div class="l-container">
           <div class="c-title">
-            <h2 class="c-title-en">Benefit</h2>
-            <span class="c-title-jp">福利厚生・待遇</span>
+            <span class="c-title-en">Benefit</span>
+            <h2 class="c-title-jp">福利厚生・待遇</h2>
           </div>
-          <dl class="recruit-benefit-table js-recruit-benefit-table">
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">給料</dt>
-              <dd class="c-table-data">月給25万円〜35万円（経験・能力による）</dd>
+          <dl class="recruit-benefit-list js-recruit-benefit-list">
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">給料</dt>
+              <dd class="recruit-benefit-item-data">月給25万円〜35万円（経験・能力による）</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">賞与</dt>
-              <dd class="c-table-data">年2回（6月・12月）</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">賞与</dt>
+              <dd class="recruit-benefit-item-data">年2回（6月・12月）</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">昇給</dt>
-              <dd class="c-table-data">年1回（4月）</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">昇給</dt>
+              <dd class="recruit-benefit-item-data">年1回（4月）</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">休日・休暇</dt>
-              <dd class="c-table-data">完全週休2日制、年間休日120日</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">休日・休暇</dt>
+              <dd class="recruit-benefit-item-data">完全週休2日制、年間休日120日</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">有給休暇</dt>
-              <dd class="c-table-data">年10日〜20日（勤続年数による）</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">有給休暇</dt>
+              <dd class="recruit-benefit-item-data">年10日〜20日（勤続年数による）</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">社会保険</dt>
-              <dd class="c-table-data">健康保険、厚生年金、雇用・労災保険</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">社会保険</dt>
+              <dd class="recruit-benefit-item-data">健康保険、厚生年金、雇用・労災保険</dd>
             </div>
-            <div class="c-table-row c-table-row--recruit js-recruit-benefit-table-row">
-              <dt class="c-table-header">研修制度</dt>
-              <dd class="c-table-data">入社時研修、外部セミナー参加支援</dd>
+            <div class="recruit-benefit-item js-recruit-benefit-item">
+              <dt class="recruit-benefit-item-title">研修制度</dt>
+              <dd class="recruit-benefit-item-data">入社時研修、外部セミナー参加支援</dd>
             </div>
           </dl>
         </div>
@@ -165,8 +165,8 @@
 
       <section class="recruit-culture u-mt">
         <div class="c-title l-container">
-          <h2 class="c-title-en">Culture</h2>
-          <span class="c-title-jp">働く環境</span>
+          <span class="c-title-en">Culture</span>
+          <h2 class="c-title-jp">働く環境</h2>
         </div>
 
         <div class="recruit-culture-splide js-recruit-culture-splide splide">
@@ -203,14 +203,16 @@
       </section>
 
       <div class="recruit-entry">
-        <div class="c-entry u-mt">
-          <div class="c-entry-circle js-entry-circle">
-            <img src="img/recruit-button-text.svg" alt="Join us, Career Launch !" class="c-entry-circle-img" />
-          </div>
+        <div class="c-entry js-entry u-mt">
+          <a href="contact.html" class="c-entry-link">
+            <div class="c-entry-circle js-entry-circle">
+              <img src="img/recruit-button-text.svg" width="355" height="360" alt="Join us, Career Launch !" decoding="async" class="c-entry-circle-img" />
+            </div>
 
-          <a href="contact.html" class="c-button c-entry-button js-entry-button">
-            <span class="c-button-text">Entry Form</span>
-            <span class="c-button-icon"></span>
+            <div class="c-button c-entry-button">
+              <span class="c-button-text">Entry Form</span>
+              <span class="c-button-icon"></span>
+            </div>
           </a>
         </div>
       </div>
@@ -225,7 +227,7 @@
 
       <div class="l-footer-info">
         <p class="l-footer-company">株式会社Career Launch</p>
-        <p class="l-footer-address">〒101-0045 <span class="u-block-sp">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
+        <p class="l-footer-address">〒101-0045 <span class="l-footer-text-unit">東京都千代田区神田鍛冶町3-2-1</span> 神田サクラビル5F</p>
         <p class="l-footer-contact">
           <span class="l-footer-tel">TEL：03-1234-5678</span>
           <span class="l-footer-fax">FAX：03-1234-5679</span>

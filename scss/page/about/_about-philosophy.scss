@@ -51,6 +51,10 @@ page > about > about-philosophy
   letter-spacing: 0.05em;
 }
 
+.about-philosophy-text-unit {
+  display: block;
+}
+
 .about-philosophy-text {
   color: var(--color-font-light);
   font-size: 14rem;

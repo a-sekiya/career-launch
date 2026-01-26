@@ -40,10 +40,7 @@ page > service > service-case
 
       .service-case-button-icon {
         background-color: var(--color-primary-hover);
-
-        &::after {
-          transform: translate(20%, -50%);
-        }
+        transform: scale(1.1);
       }
     }
   }
@@ -95,7 +92,7 @@ page > service > service-case
 .service-case-button-icon {
   width: 32rem;
   height: 32rem;
-  transition: background-color 0.3s ease, filter 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 
   &::after {
     width: 4rem;
